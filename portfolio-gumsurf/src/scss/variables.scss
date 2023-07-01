@@ -1,0 +1,6 @@
+$kasa-orange: #FF6060;
+
+@mixin smartphone {
+    min-width: 375px;
+    margin: 0px 20px 0px 20px;
+}

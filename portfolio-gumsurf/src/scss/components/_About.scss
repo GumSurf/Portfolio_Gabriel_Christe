@@ -1,0 +1,106 @@
+// Styles
+.kasa-about {
+    padding: 20px 100px 20px 100px;
+
+    .div-mountain {
+        position: relative;
+        border-radius: 25px;
+
+        .background-mountain {
+            width: 100%;
+            height: 223px;
+            background-image: url('../assets/ImgBackgroundMountain.png');
+            object-fit: cover;
+            border-radius: 25px;
+        }
+
+        .overlay-mountain {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.3);
+            border-radius: 25px;
+            z-index: 1;
+        }
+    }
+
+    details {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        border-radius: 5px;
+        background-color: $kasa-orange;
+        margin-bottom: 30px;
+
+        &[open] {
+            color: $kasa-orange;
+            background: var(--gray, #F6F6F6);
+
+            summary {
+                border-radius: 5px;
+                background-color: $kasa-orange;
+            }
+        }
+
+        &[open] summary::before {
+            background-image: url('../assets/arrow-down.svg');
+            transform: translateX(-10%) translateY(-45%);
+        }
+    }
+
+    summary {
+        position: relative;
+        padding-right: 20px;
+        padding-bottom: 4px;
+        padding-top: 4px;
+        list-style-type: none;
+        color: white;
+        padding: 10px 0px 10px 10px;
+    }
+
+    summary::before {
+        content: '';
+        display: inline-block;
+        width: 32px;
+        height: 32px;
+        background-image: url('../assets/arrow-up.svg');
+        background-size: cover;
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translateX(-10%) translateY(-55%);
+        margin-right: 10px;
+    }
+
+    .div-fiabilite {
+        margin-top: 30px;
+    }
+
+    .text-fiabilite,
+    .text-respect,
+    .text-service,
+    .text-securite {
+        padding: 15px 20px 20px 20px;
+    }
+}
+
+@include responsive(phone) {
+    .kasa-about {
+        margin-top: 0px;
+        padding: 20px 20px 0px 20px;
+
+        .div-mountain {
+            .background-mountain {
+
+                border-radius: 10px;
+            }
+
+            .overlay-mountain {
+                height: 98%;
+                border-radius: 10px;
+            }
+        }
+    }
+}

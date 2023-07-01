@@ -1,0 +1,53 @@
+.kasa-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 45px 100px 50px 100px;
+
+    .header-links {
+        display: flex;
+        list-style-type: none;
+        margin: 0;
+
+        .header-link-accueil {
+            margin-right: 57px;
+            text-decoration: none;
+            color: $kasa-orange;
+        }
+
+        .header-link-accueil:hover {
+            text-decoration: underline;
+        }
+
+        .header-link-a-propos {
+            text-decoration: none;
+            color: $kasa-orange;
+        }
+
+        .header-link-a-propos:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+@include responsive(phone) {
+    .kasa-header {
+        padding: 20px 20px 0px 20px;
+
+        .link-logo {
+            max-width: 40%;
+
+            .header-logo {
+                width: 100%;
+            }
+        }
+
+        .header-links {
+            padding: 0;
+
+            .header-link-accueil {
+                margin-right: 15px;
+            }
+        }
+    }
+}
