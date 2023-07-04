@@ -1,11 +1,32 @@
 @import 'variables';
 
-@import 'mediaquerries';
-
-@import 'components/body';
-@import 'components/notfound';
-@import 'components/apartmentdetails';
+@import 'components/Home';
+@import 'components/Portfolio';
 @import 'components/About';
+@import 'components/Contact';
+@import 'components/NotFound';
 @import 'sections/header';
 @import 'sections/footer';
 
+* {
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Open Sans', sans-serif;
+    text-shadow: 5px 5px 4px rgba(0, 0, 0, 0.5);
+}
+
+p {
+    font-family: 'Montserrat', sans-serif;
+}
+
+a, li{
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style-type: none;
+}

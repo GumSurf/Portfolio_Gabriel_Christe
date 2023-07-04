@@ -1,27 +1,58 @@
-.kasa-footer {
-    margin-top: 50px;
-    padding-top: 66px;
-    padding-bottom: 29px;
-    text-align: center;
-    background-color: black;
-    color: white;
+.portfolio-footer {
+    display: flex;
+    background-color: $portfolio-bleu-fonce;
+    align-items: center;
+    padding: 10px 100px 10px 100px;
 
-    .kasa-copyright {
-        margin-top: 29px;
-        font-weight: normal;
-        font-size: large;
-        margin-bottom: 0;
+    .div-logo {
+        width: $logo-width;
+        height: auto;
+        padding: 10px;
+
+        .lien-img {
+            // Styles du lien contenant l'image
+            display: flex;
+            justify-content: center;
+
+            .header-logo {
+                // Styles du logo
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+            }
+        }
     }
-}
 
-@include responsive(phone) {
-    .kasa-footer {
-        margin-top: 30px;
-        padding: 60px 120px 60px 120px;
+    .footer-links {
+        // Styles de la liste des liens de l'en-tête
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        list-style: none;
+        margin-left: 36%;
+        margin-right: auto;
 
-        .kasa-copyright {
-            margin-top: auto;
-            font-size: x-small;
+        .li-links {
+            // Styles des éléments de liste
+            position: relative;
+            padding-right: 100px;
+            width: $logo-width;
+            height: auto;
+             
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+
+    .footer-contact {
+        list-style: none;
+
+        li p {
+            margin-block-start: 0;
+            margin-bottom: 5px;
+            color: white;
         }
     }
 }

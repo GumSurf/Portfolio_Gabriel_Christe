@@ -1,0 +1,85 @@
+.portfolio {
+    padding-left: 100px;
+    padding-right: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: $portfolio-bleu-clair;
+
+    .title {
+        margin-top: 70px;
+        display: inline-block;
+        padding: 20px 60px 20px 60px;
+        background-color: $portfolio-orange-fonce;
+        border-radius: 20px;
+        font-size: 46px;
+    }
+
+    .div-projets-img {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: $portfolio-bleu-fonce;
+        padding: 60px 60px 0px 60px;
+        border-radius: 20px;
+        margin-top: 70px;
+        margin-bottom: 150px;
+
+        .projet {
+            width: 100vh;
+            height: auto;
+            margin-bottom: 100px;
+            padding: 50px;
+            background-color: $portfolio-bleu;
+            border-radius: 20px;
+            transition: transform 0.3s ease-in-out;
+
+            img {
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+                border-radius: 20px;
+            }
+
+            .projet-title {
+                margin-top: 20px;
+                display: inline-block;
+                padding: 10px 30px 10px 30px;
+                background-color: $portfolio-orange-fonce;
+                border-radius: 20px;
+            }
+
+            .div-projet-filtre {
+                .projet-filtre {
+                    margin-top: 20px;
+                    display: inline-block;
+                    padding: 10px 30px 10px 30px;
+                    background-color: $portfolio-orange-fonce;
+                    border-radius: 10px;
+                }
+            }
+
+            .projet-ul {
+                list-style-type: none;
+                display: flex;
+                .projet-li {
+                    padding-right: 20px;
+                    .projet-attribut {
+                        margin-top: 20px;
+                        display: inline-block;
+                        padding: 10px 30px 10px 30px;
+                        background-color: $portfolio-orange-fonce;
+                        border-radius: 40px;
+                    }
+                }
+            }
+            
+
+            &:hover {
+              transform: scale(1.05);
+            }
+        }
+    }
+}

@@ -1,52 +1,72 @@
-.kasa-header {
+// _header.scss
+
+.portfolio-header {
+    // Styles spécifiques à l'en-tête du portfolio
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    padding: 45px 100px 50px 100px;
+    background-color: $portfolio-bleu-fonce;
+    padding-left: 100px;
+    padding-right: 100px;
 
-    .header-links {
-        display: flex;
-        list-style-type: none;
-        margin: 0;
+    .div-logo {
+        width: $logo-width;
+        height: auto;
+        padding: 10px;
 
-        .header-link-accueil {
-            margin-right: 57px;
-            text-decoration: none;
-            color: $kasa-orange;
-        }
-
-        .header-link-accueil:hover {
-            text-decoration: underline;
-        }
-
-        .header-link-a-propos {
-            text-decoration: none;
-            color: $kasa-orange;
-        }
-
-        .header-link-a-propos:hover {
-            text-decoration: underline;
-        }
-    }
-}
-
-@include responsive(phone) {
-    .kasa-header {
-        padding: 20px 20px 0px 20px;
-
-        .link-logo {
-            max-width: 40%;
+        .lien-img {
+            // Styles du lien contenant l'image
+            display: flex;
+            align-items: center;
+            justify-content: center;
 
             .header-logo {
+                // Styles du logo
+                height: 100%;
                 width: 100%;
+                object-fit: cover;
             }
         }
+    }
 
-        .header-links {
-            padding: 0;
+    .header-links {
+        // Styles de la liste des liens de l'en-tête
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        list-style: none;
 
-            .header-link-accueil {
-                margin-right: 15px;
+        .li-links {
+            // Styles des éléments de liste
+            padding-right: 100px;
+            position: relative;
+
+            a {
+                // Styles des liens de l'en-tête
+                text-decoration: none;
+                color: whitesmoke;
+                list-style: none;
+                position: relative;
+
+                &::after {
+                    content: ""; // Ajoute du contenu au pseudo-élément
+                    position: absolute; // Positionne le pseudo-élément par rapport au lien
+                    bottom: -2px; // Place la barre juste en dessous du lien
+                    left: 0; // Position de départ de la barre (juste en dessous du premier lien)
+                    width: 0; // Largeur initiale de la barre (0 pour la cacher)
+                    height: 2px; // Hauteur de la barre
+                    background-color: whitesmoke; // Couleur de la barre
+                    transition: left 0.3s, width 0.3s; // Transition de 0.3 seconde pour l'animation de la position et de la largeur
+                }
+
+                &:hover::after {
+                    width: 100%; // Largeur de la barre (pour la faire apparaître entièrement)
+                    left: 0; // Position de départ de la barre (juste en dessous du lien survolé)
+                }
+
+                &.active::after {
+                    width: 100%; // Largeur de la barre (pour la faire apparaître entièrement)
+                    left: 0; // Position de départ de la barre (juste en dessous du lien actif)
+                }
             }
         }
     }
