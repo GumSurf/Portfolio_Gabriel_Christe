@@ -15,7 +15,7 @@ function App() {
       <Header />
 
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/Portfolio_GumSurf/" element={<Home />} />
         <Route path="/Portfolio" element={<Portfolio />} />
         <Route path="/About" element={<About />} />
         <Route path="/Contact" element={<Contact />} />
