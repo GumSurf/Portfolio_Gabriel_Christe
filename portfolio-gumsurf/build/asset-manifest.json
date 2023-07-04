@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Portfolio_GumSurf/static/css/main.23536962.css",
-    "main.js": "/Portfolio_GumSurf/static/js/main.99ddffa3.js",
+    "main.js": "/Portfolio_GumSurf/static/js/main.9125a34d.js",
     "static/js/787.7785119b.chunk.js": "/Portfolio_GumSurf/static/js/787.7785119b.chunk.js",
     "static/media/NinaCarducci.png": "/Portfolio_GumSurf/static/media/NinaCarducci.3e497fb13a9da48aa121.png",
     "static/media/Me.jpg": "/Portfolio_GumSurf/static/media/Me.9908a372e75a518ccf12.jpg",
@@ -14,11 +14,11 @@
     "static/media/Github.png": "/Portfolio_GumSurf/static/media/Github.562cd1af0dd60d5da40d.png",
     "index.html": "/Portfolio_GumSurf/index.html",
     "main.23536962.css.map": "/Portfolio_GumSurf/static/css/main.23536962.css.map",
-    "main.99ddffa3.js.map": "/Portfolio_GumSurf/static/js/main.99ddffa3.js.map",
+    "main.9125a34d.js.map": "/Portfolio_GumSurf/static/js/main.9125a34d.js.map",
     "787.7785119b.chunk.js.map": "/Portfolio_GumSurf/static/js/787.7785119b.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.23536962.css",
-    "static/js/main.99ddffa3.js"
+    "static/js/main.9125a34d.js"
   ]
 }

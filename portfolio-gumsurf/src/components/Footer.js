@@ -7,7 +7,7 @@ function Footer() {
     return (
         <div className='portfolio-footer'>
             <div className='div-logo'>
-                <a className='lien-img' href='#'><img className="header-logo" src={LOGO} alt="Logo" /></a>
+                <Link className='lien-img' to='https://gumsurf.github.io/Portfolio_GumSurf/'><img className="header-logo" src={LOGO} alt="Logo" /></Link>
             </div>
             <ul className='footer-links'>
                 <li className='li-links'>
