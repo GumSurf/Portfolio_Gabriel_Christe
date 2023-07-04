@@ -3,26 +3,22 @@ import { Link } from 'react-router-dom';
 
 function Header() {
     return (
-        <div className="kasa-header">
-            <Link className='link-logo' to="/">
-                <img className="header-logo" src={ImgLogo} alt="Logo Kasa" />
-            </Link>
+        <div className="portfolio-header">
+            <div className='div-logo'>
+                <Link className='lien-img' to='/'><img className="header-logo" src={ImgLogo} alt="Logo Kasa" /></Link>
+            </div>
             <ul className="header-links">
                 <li className='li-links'>
-                    <Link className="header-link-accueil" to="/">
-                        Accueil
-                    </Link>
-                </li>
-                <li>
-                    <a href='#'>Portfolio</a>
+                    <Link className='lien-accueil' to='/'>Accueil</Link>
                 </li>
                 <li className='li-links'>
-                    <Link className="header-link-a-propos" to="/about">
-                        A propos de moi
-                    </Link>
+                    <Link className='lien-portfolio' to='/Portfolio'>Portfolio</Link>
                 </li>
-                <li>
-                    <a href='#'>Contact</a>
+                <li className='li-links'>
+                    <Link className='lien-about' to='/About'>A propos de moi</Link>
+                </li>
+                <li className='li-links'>
+                    <Link className='lien-contact' to='/Contact'>Contact</Link>
                 </li>
             </ul>
         </div>
