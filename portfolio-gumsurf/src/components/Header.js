@@ -9,7 +9,7 @@ function Header() {
             </div>
             <ul className="header-links">
                 <li className='li-links'>
-                    <Link className='lien-accueil' to='/'>Accueil</Link>
+                    <Link className='lien-accueil' to='/Portfolio_GumSurf/'>Accueil</Link>
                 </li>
                 <li className='li-links'>
                     <Link className='lien-portfolio' to='/Portfolio'>Portfolio</Link>
