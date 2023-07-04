@@ -5,7 +5,7 @@ function Header() {
     return (
         <div className="portfolio-header">
             <div className='div-logo'>
-                <Link className='lien-img' to='/'><img className="header-logo" src={ImgLogo} alt="Logo Kasa" /></Link>
+                <Link className='lien-img' to='/Portfolio_GumSurf/'><img className="header-logo" src={ImgLogo} alt="Logo Kasa" /></Link>
             </div>
             <ul className="header-links">
                 <li className='li-links'>
