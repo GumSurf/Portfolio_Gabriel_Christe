@@ -1,41 +1,38 @@
-function About() {
+import React from 'react';
+import Me from '../assets/Me.jpg';
+
+function Home() {
     return (
-        <div className="kasa-about">
-            <div className='div-mountain'>
-                <div className='overlay-mountain'></div>
+        <div className='About'>
+            <div className='div-img-me'>
+                <img className='img-me' src={Me}/>
             </div>
-            <details className="div-fiabilite">
-                <summary>Fiabilité</summary>
-                <div className="text-fiabilite">
-                    Les annonces postées sur Kasa garantissent une fiabilité totale. Les photos sont conformes aux logements,
-                    et toutes les informations sont régulièrement vérifiées par nos équipes.
-                </div>
-            </details>
-            <details>
-                <summary>Respect</summary>
-                <div className="text-respect">
-                    La bienveillance fait partie des valeurs fondatrices de Kasa. Tout comportement discriminatoire ou de
-                    perturbation du voisinage entraînera une exclusion de notre plateforme.
-                </div>
-            </details>
-            <details>
-                <summary>Service</summary>
-                <div className="text-service">
-                    Nos équipes se tiennent à votre disposition pour vous fournir une expérience parfaite. N'hésitez pas à nous
-                    contacter si vous avez la moindre question.
-                </div>
-            </details>
-            <details>
-                <summary>Sécurité</summary>
-                <div className="text-securite">
-                    La sécurité est la priorité de Kasa. Aussi bien pour nos hôtes que pour les voyageurs, chaque logement
-                    correspond aux critères de sécurité établis par nos services. En laissant une note aussi bien à l'hôte qu'au
-                    locataire, cela permet à nos équipes de vérifier que les standards sont bien respectés. Nous organisons
-                    également des ateliers sur la sécurité domestique pour nos hôtes.
-                </div>
-            </details>
+            <div className='info'>
+            <h1 className='title'>À propos</h1>
+            <p className='paraghraphe1'>
+                Je m'appelle Gabriel Christe, développeur web passionné de 21 ans. Mon expertise se concentre sur React, 
+                HTML, CSS et JavaScript, me permettant de créer des sites modernes et réactifs. Je relève les défis techniques 
+                avec créativité et recherche des solutions innovantes. Mon objectif est de fournir des expériences utilisateur 
+                uniques et engageantes en suivant les meilleures pratiques du développement web. Je suis disponible pour créer 
+                des sites sur mesure ou pour la refonte de projets existants. Contactez-moi pour concrétiser votre vision.
+            </p>
+            <ul>
+                <li>
+                    <p className='competences'>REACT</p>
+                </li>
+                <li>
+                    <p className='competences'>HTML / CSS</p>
+                </li>
+                <li>
+                    <p className='competences'>JAVASCRIPT</p>
+                </li>
+                <li>
+                    <p className='competences'>C</p>
+                </li>
+            </ul>
+            </div>
         </div>
-    );
+    )
 }
 
-export default About;
+export default Home
