@@ -2,8 +2,10 @@ import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Header from './Header';
 import Footer from './Footer';
-import Main from './Main';
+import Home from './Home';
+import Portfolio from './Portfolio';
 import About from './About';
+import Contact from './Contact';
 import NotFound from './NotFound';
 import '../css/style.css'
 
@@ -13,8 +15,10 @@ function App() {
       <Header />
 
       <Routes>
-        <Route path="/" element={<Main />} />
-        <Route path="/about" element={<About />} />
+        <Route path="/" element={<Home />} />
+        <Route path="/Portfolio" element={<Portfolio />} />
+        <Route path="/About" element={<About />} />
+        <Route path="/Contact" element={<Contact />} />
         <Route path='*' element={<NotFound />}/>
       </Routes>
 
