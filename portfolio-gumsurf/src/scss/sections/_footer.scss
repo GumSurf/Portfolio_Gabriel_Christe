@@ -1,11 +1,10 @@
 .portfolio-footer {
     display: flex;
-    background-color: $portfolio-bleu-fonce;
     align-items: center;
     padding: 10px 100px 10px 100px;
 
     .div-logo {
-        width: $logo-width;
+        width: 100px;
         height: auto;
         padding: 10px;
 
@@ -37,7 +36,7 @@
             // Styles des éléments de liste
             position: relative;
             padding-right: 100px;
-            width: $logo-width;
+            width: 50px;
             height: auto;
              
             img {

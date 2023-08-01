@@ -1,5 +1,6 @@
 @import 'variables';
 
+@import 'components/Planetes';
 @import 'components/Home';
 @import 'components/Portfolio';
 @import 'components/About';
@@ -13,9 +14,8 @@
     padding: 0;
 }
 
-h1, h2, h3, h4, h5, h6 {
-    font-family: 'Open Sans', sans-serif;
-    text-shadow: 5px 5px 4px rgba(0, 0, 0, 0.5);
+body {
+    background-color: #312068;
 }
 
 p {

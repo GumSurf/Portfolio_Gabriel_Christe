@@ -5,7 +5,7 @@
     height: 100vh;
 
     .background-color {
-        background-color: #f4f4f4;
+        background-color: $portfolio-background;
         padding: 40px;
         border-radius: 10px;
         margin: 0 20%;
@@ -24,7 +24,7 @@
                 display: flex;
                 flex-direction: column;
                 overflow: hidden;
-                /* Ajout de la propriété overflow */
+                color: whitesmoke;
 
                 label {
                     font-weight: bold;

@@ -1,19 +1,19 @@
 .portfolio {
+    height: 100%;
     padding-left: 100px;
     padding-right: 100px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: $portfolio-bleu-clair;
 
     .title {
         margin-top: 70px;
         display: inline-block;
         padding: 20px 60px 20px 60px;
-        background-color: $portfolio-orange-fonce;
         border-radius: 20px;
         font-size: 46px;
+        color: whitesmoke;
     }
 
     .div-projets-img {
@@ -21,9 +21,8 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        background-color: $portfolio-bleu-fonce;
         padding: 60px 60px 0px 60px;
-        border-radius: 20px;
+        border-radius: 10px;
         margin-top: 70px;
         margin-bottom: 150px;
 
@@ -32,53 +31,66 @@
             height: auto;
             margin-bottom: 100px;
             padding: 50px;
-            background-color: $portfolio-bleu;
-            border-radius: 20px;
-            transition: transform 0.3s ease-in-out;
+            border-radius: 10px;
 
-            img {
-                height: 100%;
-                width: 100%;
-                object-fit: cover;
-                border-radius: 20px;
-            }
+            .image-container {
+                position: relative;
 
-            .projet-title {
-                margin-top: 20px;
-                display: inline-block;
-                padding: 10px 30px 10px 30px;
-                background-color: $portfolio-orange-fonce;
-                border-radius: 20px;
-            }
+                img {
+                    height: 100%;
+                    width: 100%;
+                    object-fit: cover;
+                    border-radius: 5px;
+                }
 
-            .div-projet-filtre {
-                .projet-filtre {
-                    margin-top: 20px;
-                    display: inline-block;
-                    padding: 10px 30px 10px 30px;
-                    background-color: $portfolio-orange-fonce;
-                    border-radius: 10px;
+                .overlay {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 99.2%;
+                    border-radius: 5px;
+                    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7));
+
+                    .projet-title {
+                        position: absolute;
+                        bottom: 0;
+                        margin: 20px;
+                        margin-bottom: 50px;
+                        color: whitesmoke;
+                    }
+
+                    .div-projet-filtre {
+                        .projet-filtre {
+                            position: absolute;
+                            bottom: 0;
+                            margin: 20px;
+                            color: whitesmoke;
+                        }
+                    }
                 }
             }
 
             .projet-ul {
                 list-style-type: none;
                 display: flex;
+
                 .projet-li {
                     padding-right: 20px;
+                    transition: transform 0.3s ease-in-out;
+
                     .projet-attribut {
                         margin-top: 20px;
                         display: inline-block;
                         padding: 10px 30px 10px 30px;
-                        background-color: $portfolio-orange-fonce;
-                        border-radius: 40px;
+                        background-color: rebeccapurple;
+                        color: whitesmoke;
+                        border-radius: 10px;
                     }
                 }
-            }
-            
-
-            &:hover {
-              transform: scale(1.05);
+                .projet-li:hover {
+                    transform: scale(1.05);
+                }
             }
         }
     }
