@@ -1,4 +1,4 @@
-import LOGO from '../assets/LOGO.png'
+import LOGO from '../assets/Logo-Gabriel-CHRISTE.png'
 import Github from '../assets/Github.png'
 import Linkedin from '../assets/Linkedin.png'
 import { Link } from 'react-router-dom';

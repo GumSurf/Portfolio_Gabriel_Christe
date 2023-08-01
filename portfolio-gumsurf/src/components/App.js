@@ -1,5 +1,6 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
+import Planetes from './Planetes';
 import Header from './Header';
 import Footer from './Footer';
 import Home from './Home';
@@ -15,6 +16,7 @@ function App() {
       <Header />
 
       <Routes>
+        <Route path="/Planetes" element={<Planetes />} />
         <Route path="/Portfolio_GumSurf/" element={<Home />} />
         <Route path="/Portfolio" element={<Portfolio />} />
         <Route path="/About" element={<About />} />
