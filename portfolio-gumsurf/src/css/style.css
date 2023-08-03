@@ -4,6 +4,101 @@
 #221E22
 #ECA72C
 #EE5622*/
+.move-right-left {
+  position: absolute;
+  left: 0;
+  animation: moveRightLeft 5s linear infinite alternate; }
+
+.move-top-bottom {
+  position: absolute;
+  top: 0;
+  animation: moveTopBottom 12s linear infinite alternate; }
+
+.rotate-self {
+  animation: rotateSelf 24s linear infinite; }
+
+.rotate-60 {
+  animation: rotate60 3s linear infinite alternate; }
+
+.rotate-180 {
+  animation: rotate180 3s linear infinite alternate; }
+
+.move-right-left-rotate {
+  position: absolute;
+  left: 0;
+  animation: moveRightLeftRotate 12s linear infinite alternate; }
+
+.shack:hover {
+  animation: myAnim 2s ease 1 normal forwards; }
+
+@keyframes moveRightLeft {
+  0% {
+    transform: translateX(0); }
+  100% {
+    transform: translateX(200px); } }
+@keyframes moveTopBottom {
+  0% {
+    transform: translateY(0); }
+  100% {
+    transform: translateY(500px); } }
+@keyframes rotateSelf {
+  0% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(360deg);
+    /* Rotation complète */ } }
+@keyframes moveRightLeftRotate {
+  0% {
+    transform: rotate(0) translateX(0) translateY(50vh); }
+  25% {
+    transform: rotate(0deg) translateX(50vh) translateY(0vh);
+    /* Déplacement vers la droite et vers le haut (parabole ascendante) */ }
+  50% {
+    transform: rotate(0deg) translateX(100vh) translateY(-50vh);
+    /* Déplacement vers la droite et vers le haut (parabole ascendante) */ }
+  75% {
+    transform: rotate(0deg) translateX(150vh) translateY(-100vh);
+    /* Déplacement vers la droite et vers le haut (parabole ascendante) */ }
+  100% {
+    transform: rotate(0deg) translateX(200vh) translateY(-150vh); } }
+@keyframes parabolaAnimation {
+  0% {
+    transform: translateX(0) translateY(0); }
+  50% {
+    transform: translateX(200px) translateY(-100px);
+    /* Déplacement vers la droite et vers le haut (parabole ascendante) */ }
+  100% {
+    transform: translateX(400px) translateY(0);
+    /* Déplacement vers la droite (retour à la position d'origine) */ } }
+@keyframes myAnim {
+  0%,
+	100% {
+    transform: rotate(0deg);
+    transform-origin: 50% 50%; }
+  10% {
+    transform: rotate(8deg); }
+  20%,
+	40%,
+	60% {
+    transform: rotate(-10deg); }
+  30%,
+	50%,
+	70% {
+    transform: rotate(10deg); }
+  80% {
+    transform: rotate(-8deg); }
+  90% {
+    transform: rotate(8deg); } }
+@keyframes rotate60 {
+  0% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(60deg); } }
+@keyframes rotate180 {
+  0% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(180deg); } }
 .div_planetes {
   height: 60vh;
   display: flex;
@@ -72,8 +167,36 @@
     pointer-events: auto; }
 
 .home {
+  position: relative;
   height: 100vh;
   width: 100%; }
+  .home .background {
+    overflow: hidden; }
+    .home .background .rose_planete {
+      position: absolute;
+      bottom: 35vh;
+      right: 20vh; }
+    .home .background .planete3 {
+      position: fixed;
+      width: 300px;
+      right: -10vh;
+      top: -100px; }
+    .home .background .planete1 {
+      position: fixed;
+      right: -15vh;
+      bottom: -250px;
+      z-index: -1; }
+    .home .background .asteroide {
+      position: fixed;
+      width: 100px;
+      bottom: -200px;
+      left: 30vh;
+      z-index: -1; }
+    .home .background .planete4 {
+      position: fixed;
+      top: -200px;
+      left: -150px;
+      z-index: -1; }
   .home #fond {
     position: relative;
     height: 100%;
@@ -87,7 +210,7 @@
     z-index: 10; }
     .home .conteneur .bienvenue {
       font-size: 38px;
-      color: #f45d01ff;
+      color: whitesmoke;
       padding-top: 100px;
       padding-bottom: 20px; }
     .home .conteneur h1 {
@@ -115,12 +238,13 @@
           transform: translateY(-2px); }
         .home .conteneur .div-links .div-link .link {
           padding: 20px;
-          border: 2px solid #f2bb05ff;
+          border: 2px solid #00dddd;
           border-radius: 40px;
           color: white;
           transition: background-color 0.3s; }
           .home .conteneur .div-links .div-link .link:hover {
-            background-color: #f2bb05ff; }
+            background-color: #00dddd;
+            color: #800080; }
   .home .rond {
     margin: auto;
     margin-top: 7%;
@@ -140,6 +264,12 @@
         height: auto;
         width: 90%;
         object-fit: cover; }
+
+.typewriter {
+  font-family: sans-serif;
+  font-weight: 800;
+  font-size: 40px;
+  color: #00dddd; }
 
 .portfolio {
   height: 100%;
@@ -207,8 +337,8 @@
             margin-top: 20px;
             display: inline-block;
             padding: 10px 30px 10px 30px;
-            background-color: rebeccapurple;
-            color: whitesmoke;
+            background-color: #00dddd;
+            color: purple;
             border-radius: 10px; }
         .portfolio .div-projets-img .projet .projet-ul .projet-li:hover {
           transform: scale(1.05); }
@@ -218,56 +348,85 @@
   display: flex;
   justify-content: center;
   align-items: center; }
-  .About .div-img-me {
-    width: 400px;
-    height: 400px;
-    padding: 10px;
-    background-color: #051014ff;
-    border-radius: 400px; }
-    .About .div-img-me .img-me {
-      border-radius: 300px;
-      width: 100%;
-      height: 100%;
-      object-fit: cover; }
-  .About .info {
+  .About .competences_frontend {
+    background-color: #201057;
+    color: whitesmoke;
     display: flex;
     flex-direction: column;
-    margin-left: 100px;
-    border-radius: 10px;
-    padding: 20px; }
-    .About .info .title {
-      text-align: center;
-      display: inline-block;
-      padding: 10px 30px 10px 30px;
-      background-color: black;
-      color: whitesmoke;
-      border-radius: 10px; }
-    .About .info .paraghraphe1 {
-      width: 100vh;
-      margin-top: 40px;
-      display: inline-block;
-      padding: 30px;
-      background-color: black;
-      color: whitesmoke;
-      border-radius: 10px; }
-    .About .info .paraghraphe2 {
-      width: 60vh;
-      margin-top: 20px;
-      display: inline-block;
-      padding: 10px 30px 10px 30px;
-      background-color: black;
-      color: whitesmoke;
-      border-radius: 10px; }
-    .About .info ul {
-      display: flex; }
-      .About .info ul li .competences {
-        margin-top: 40px;
-        display: inline-block;
-        padding: 10px 30px 10px 30px;
-        background-color: black;
-        color: whitesmoke;
-        border-radius: 10px;
-        margin-right: 20px; }
+    padding: 80px;
+    height: 550px;
+    border-right: 1px solid #00cccc;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px; }
+    .About .competences_frontend * {
+      text-align: center; }
+    .About .competences_frontend :nth-child(1) {
+      margin: 30px; }
+    .About .competences_frontend :nth-child(2) {
+      margin: 20px; }
+    .About .competences_frontend :nth-child(3) {
+      margin: 10px; }
+    .About .competences_frontend :nth-child(4) {
+      margin: 20px; }
+    .About .competences_frontend h2:nth-child(1) {
+      margin: 30px;
+      color: #00dddd;
+      font-size: 40px; }
+    .About .competences_frontend p:nth-child(2) {
+      margin: 20px;
+      color: #00dddd;
+      font-size: 30px; }
+    .About .competences_frontend p:nth-child(4) {
+      margin: 20px;
+      color: #00dddd;
+      font-size: 30px; }
+    .About .competences_frontend li {
+      margin: 20px; }
+  .About .competences_backend {
+    background-color: #201057;
+    color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+    border-left: 1px solid #00cccc;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding: 80px;
+    height: 550px; }
+    .About .competences_backend * {
+      text-align: center; }
+    .About .competences_backend :nth-child(1) {
+      margin: 30px; }
+    .About .competences_backend :nth-child(2) {
+      margin: 20px; }
+    .About .competences_backend :nth-child(3) {
+      margin: 10px; }
+    .About .competences_backend :nth-child(4) {
+      margin: 20px; }
+    .About .competences_backend h2:nth-child(1) {
+      margin: 30px;
+      color: #00dddd;
+      font-size: 40px; }
+    .About .competences_backend p:nth-child(2) {
+      margin: 20px;
+      color: #00dddd;
+      font-size: 30px; }
+    .About .competences_backend p:nth-child(4) {
+      margin: 20px;
+      color: #00dddd;
+      font-size: 30px; }
+    .About .competences_backend li:nth-child(1) {
+      margin: 20px; }
+    .About .competences_backend li {
+      margin: 20px; }
+  .About .onde-icon {
+    display: block;
+    margin-top: 35px; }
+  .About .onde-icon span {
+    display: block;
+    width: 35px;
+    height: 5px;
+    background-color: #00cccc;
+    margin: 6px 0; }
 
 .contact {
   display: flex;
@@ -334,6 +493,15 @@
         cursor: pointer; }
         .contact .background-color form .button-submit:hover {
           background-color: #45a049; }
+  .contact .onde_satellite {
+    position: relative;
+    right: -35px;
+    top: -90px;
+    width: 150px;
+    transform: rotate(-50deg);
+    z-index: 3; }
+  .contact .satellite_about {
+    width: 200px; }
 
 .portfolio-header {
   display: flex;
@@ -342,7 +510,7 @@
   padding-right: 100px;
   position: sticky;
   top: 0;
-  z-index: 11;
+  z-index: 60;
   transition: background-color 0.3s;
   /* Sidenav menu */
   /* Sidenav menu links */
@@ -363,11 +531,11 @@
         transition: width 0.3s; }
   .portfolio-header .sidenav {
     height: 100%;
-    width: 250px;
+    width: 350px;
     position: fixed;
     z-index: 1;
     top: 0;
-    right: -250px;
+    right: -350px;
     background-color: #201057;
     padding-top: 60px;
     transition: right 0.5s ease; }
@@ -381,10 +549,24 @@
     font-size: 25px;
     color: #f1f1f1f1;
     display: block;
-    text-align: right;
-    transition: 0.3s; }
+    transition: 0.3s;
+    display: flex;
+    align-items: center; }
+  .portfolio-header .sidenav p {
+    display: inline-block;
+    vertical-align: middle; }
+  .portfolio-header .planete {
+    display: inline-block;
+    vertical-align: middle;
+    width: 80px;
+    margin-left: auto; }
+  .portfolio-header .satellite {
+    display: inline-block;
+    vertical-align: middle;
+    width: 60px;
+    margin-left: auto; }
   .portfolio-header .sidenav a:hover {
-    color: #00cccc; }
+    color: #00dddd; }
   .portfolio-header .sidenav.active {
     right: 0; }
   .portfolio-header .sidenav .close {
@@ -399,7 +581,7 @@
     display: block;
     width: 35px;
     height: 5px;
-    background-color: #00cccc;
+    background-color: #00dddd;
     margin: 6px 0; }
   .portfolio-header .header-links {
     display: flex;
