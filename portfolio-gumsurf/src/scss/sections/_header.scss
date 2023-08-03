@@ -8,7 +8,7 @@
     padding-right: 100px;
     position: sticky;
     top: 0;
-    z-index: 11;
+    z-index: 60;
     transition: background-color 0.3s;
 
     .div-logo {
@@ -34,11 +34,11 @@
 /* Sidenav menu */
 .sidenav {
     height: 100%;
-    width: 250px;
+    width: 350px;
     position: fixed;
     z-index: 1;
     top: 0;
-    right: -250px;
+    right: -350px;
     background-color: #201057;
     padding-top: 60px;
     transition: right 0.5s ease;
@@ -57,12 +57,32 @@
     font-size: 25px;
     color: #f1f1f1f1;
     display: block;
-    text-align: right;
     transition: 0.3s;
+    display: flex;
+    align-items: center;
+  }
+
+  .sidenav p {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  .planete {
+    display: inline-block;
+    vertical-align: middle;
+    width: 80px;
+    margin-left: auto;
+  }
+
+  .satellite {
+    display: inline-block;
+    vertical-align: middle;
+    width: 60px;
+    margin-left: auto;
   }
   
   .sidenav a:hover {
-    color: #00cccc;
+    color: $portfolio-bleu-clair;
   }
   
   /* Active class */
@@ -87,7 +107,7 @@
     display: block;
     width: 35px;
     height: 5px;
-    background-color: #00cccc;
+    background-color: $portfolio-bleu-clair;
     margin: 6px 0;
   }
 

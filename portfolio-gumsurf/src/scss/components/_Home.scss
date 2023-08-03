@@ -1,6 +1,46 @@
 .home {
+    position: relative;
     height: 100vh; // La hauteur de la div sera égale à 100% de la hauteur de l'écran
     width: 100%; // La largeur de la div sera égale à 100% de la largeur disponible
+
+    .background {
+        overflow: hidden;
+
+        .rose_planete {
+            position: absolute;
+            bottom: 35vh;
+            right: 20vh;
+        }
+
+        .planete3 {
+            position: fixed;
+            width: 300px;
+            right: -10vh;
+            top: -100px;
+        }
+
+        .planete1 {
+            position: fixed;
+            right: -15vh;
+            bottom: -250px;
+            z-index: -1;
+        }
+
+        .asteroide {
+            position: fixed;
+            width: 100px;
+            bottom: -200px;
+            left: 30vh;
+            z-index: -1;
+        }
+
+        .planete4 {
+            position: fixed;
+            top: -200px;
+            left: -150px;
+            z-index: -1;
+        }
+    }
 
     #fond {
         position: relative;
@@ -18,7 +58,7 @@
 
         .bienvenue {
             font-size: 38px;
-            color: $portfolio-orange-clair;
+            color: whitesmoke;
             padding-top: 100px;
             padding-bottom: 20px;
         }
@@ -58,13 +98,14 @@
 
                 .link {
                     padding: 20px;
-                    border: 2px solid $portfolio-orange;
+                    border: 2px solid $portfolio-bleu-clair;
                     border-radius: 40px;
                     color: white;
                     transition: background-color 0.3s;
-                    
+
                     &:hover {
-                        background-color: $portfolio-orange;
+                        background-color: $portfolio-bleu-clair;
+                        color: $portfolio-violet;
                     }
                 }
             }

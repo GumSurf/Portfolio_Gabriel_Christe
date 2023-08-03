@@ -81,4 +81,17 @@
             }
         }
     }
+
+    .onde_satellite {
+        position: relative;
+        right: -35px;
+        top: -90px;
+        width: 150px;
+        transform: rotate(-50deg);
+        z-index: 3;
+    }
+
+    .satellite_about {
+        width: 200px;
+    }
 }

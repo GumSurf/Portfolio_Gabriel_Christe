@@ -1,0 +1,157 @@
+.move-right-left {
+    position: absolute;
+    left: 0;
+    animation: moveRightLeft 5s linear infinite alternate;
+}
+
+.move-top-bottom {
+    position: absolute;
+    top: 0;
+    animation: moveTopBottom 12s linear infinite alternate;
+}
+
+.rotate-self {
+    animation: rotateSelf 24s linear infinite;
+}
+
+.rotate-60 {
+    animation: rotate60 3s linear infinite alternate;
+}
+
+.rotate-180 {
+    animation: rotate180 3s linear infinite alternate;
+}
+
+.move-right-left-rotate {
+    position: absolute;
+    left: 0;
+    animation: moveRightLeftRotate 12s linear infinite alternate;
+}
+
+.shack:hover {
+    animation: myAnim 2s ease 1 normal forwards;
+}
+
+@keyframes moveRightLeft {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(200px);
+    }
+}
+
+@keyframes moveTopBottom {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(500px);
+    }
+}
+
+@keyframes rotateSelf {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+        /* Rotation complète */
+    }
+}
+
+@keyframes moveRightLeftRotate {
+    0% {
+        transform: rotate(0) translateX(0) translateY(50vh);
+    }
+
+    25% {
+        transform: rotate(0deg) translateX(50vh) translateY(0vh);
+        /* Déplacement vers la droite et vers le haut (parabole ascendante) */
+    }
+
+    50% {
+        transform: rotate(0deg) translateX(100vh) translateY(-50vh);
+        /* Déplacement vers la droite et vers le haut (parabole ascendante) */
+    }
+
+    75% {
+        transform: rotate(0deg) translateX(150vh) translateY(-100vh);
+        /* Déplacement vers la droite et vers le haut (parabole ascendante) */
+    }
+
+    100% {
+        transform: rotate(0deg) translateX(200vh) translateY(-150vh);
+    }
+}
+
+@keyframes parabolaAnimation {
+    0% {
+        transform: translateX(0) translateY(0);
+    }
+
+    50% {
+        transform: translateX(200px) translateY(-100px);
+        /* Déplacement vers la droite et vers le haut (parabole ascendante) */
+    }
+
+    100% {
+        transform: translateX(400px) translateY(0);
+        /* Déplacement vers la droite (retour à la position d'origine) */
+    }
+}
+
+@keyframes myAnim {
+	0%,
+	100% {
+		transform: rotate(0deg);
+		transform-origin: 50% 50%;
+	}
+
+	10% {
+		transform: rotate(8deg);
+	}
+
+	20%,
+	40%,
+	60% {
+		transform: rotate(-10deg);
+	}
+
+	30%,
+	50%,
+	70% {
+		transform: rotate(10deg);
+	}
+
+	80% {
+		transform: rotate(-8deg);
+	}
+
+	90% {
+		transform: rotate(8deg);
+	}
+}
+
+@keyframes rotate60 {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(60deg);
+    }
+}
+
+@keyframes rotate180 {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(180deg);
+    }
+}
