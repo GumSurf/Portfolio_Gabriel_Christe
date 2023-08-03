@@ -4,10 +4,12 @@ import Booki from '../assets/Booki.png';
 import Kasa from '../assets/Kasa.png';
 import SophieBluel from '../assets/SophieBluel.png';
 import { Link } from 'react-router-dom';
+import PlanetePortfolio from '../assets/violette_planete.webp';
 
 function Body() {
     return (
         <div className='portfolio'>
+            <img className='planete_portfolio' src={PlanetePortfolio} alt="planete" />
             <h2 className='title'>MES PROJETS</h2>
             <div className='div-projets-img'>
                 <div className='Kasa, projet'>

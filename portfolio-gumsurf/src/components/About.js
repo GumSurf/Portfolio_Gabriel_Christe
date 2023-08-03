@@ -1,41 +1,38 @@
 import React from 'react';
 import Me from '../assets/Me.jpg';
+import Planete from '../assets/bleu_planete.webp';
 
 function Home() {
     return (
-        <div className='About'>
-            <div className='div-img-me'>
-                <img className='img-me' src={Me} alt="Moi"/>
-            </div>
-            <div className='info'>
-                <h1 className='title'>À propos</h1>
-                <p className='paraghraphe1'>
-                    Je m'appelle Gabriel Christe, développeur web passionné de 21 ans. Mon expertise se concentre sur React,
-                    HTML, CSS et JavaScript, me permettant de créer des sites modernes et réactifs. Je relève les défis techniques
-                    avec créativité et recherche des solutions innovantes. Mon objectif est de fournir des expériences utilisateur
-                    uniques et engageantes en suivant les meilleures pratiques du développement web. Je suis disponible pour créer
-                    des sites sur mesure ou pour la refonte de projets existants. Contactez-moi pour concrétiser votre vision.
-                </p>
-                <ul>
-                    <li>
-                        <p className='competences'>React</p>
-                    </li>
-                    <li>
-                        <p className='competences'>Html / Css</p>
-                    </li>
-                    <li>
-                        <p className='competences'>JavaScript</p>
-                    </li>
-                    <li>
-                        <p className='competences'>Node.js</p>
-                    </li>
-                    <li>
-                        <p className='competences'>MongoDB</p>
-                    </li>
-                    <li>
-                        <p className='competences'>C</p>
-                    </li>
-                </ul>
+        <div>
+            <img className='planete_about' src={Planete} alt="planete" />
+            <div className='About'>
+                <div className='competences_frontend'>
+                    <h2>Développeur Frontend</h2>
+                    <p>Languages:</p>
+                    <p>Html, Css, JavaScript, React, Sass</p>
+                    <p>Outils Dev:</p>
+                    <ul>
+                        <li>Lighthouse</li>
+                        <li>Wave</li>
+                        <li>Figma</li>
+                        <li>Github</li>
+                        <li>Visual Studio Code</li>
+                    </ul>
+                </div>
+                <div className='competences_backend'>
+                    <h2>Développeur Backend</h2>
+                    <p>Languages:</p>
+                    <p>JavaScript, Node.js, Express.js</p>
+                    <p>Outils Dev:</p>
+                    <ul>
+                        <li>MongoDB</li>
+                        <li>Github</li>
+                        <li>Owasp</li>
+                        <li>Green IT</li>
+                        <li>Visual Studio Code</li>
+                    </ul>
+                </div>
             </div>
         </div>
     )

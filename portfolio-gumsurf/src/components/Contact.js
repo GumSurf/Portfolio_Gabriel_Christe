@@ -1,6 +1,7 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
 import emailjs from 'emailjs-com';
+import Satellite from '../assets/satellite.webp';
 
 function Contact() {
     const { register, handleSubmit, formState: { errors } } = useForm();
@@ -47,6 +48,7 @@ function Contact() {
                     </div>
                 </form>
             </div>
+            <img className='satellite_about rotate-60' src={Satellite} alt="satellite"/>
         </div>
     )
 }
