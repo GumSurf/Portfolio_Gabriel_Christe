@@ -9,7 +9,7 @@ import PlanetePortfolio from '../assets/violette_planete.webp';
 function Body() {
     return (
         <div className='portfolio'>
-            <img className='planete_portfolio' src={PlanetePortfolio} alt="planete" />
+            <img className='planete_portfolio rotate-self' src={PlanetePortfolio} alt="planete" />
             <h2 className='title'>MES PROJETS</h2>
             <div className='div-projets-img'>
                 <div className='Kasa, projet'>
