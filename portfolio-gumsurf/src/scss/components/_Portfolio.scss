@@ -24,6 +24,10 @@
         border-radius: 20px;
         font-size: 46px;
         color: whitesmoke;
+
+        @include phone {
+            font-size: 30px;
+        }
     }
 
     .div-projets-img {
@@ -58,7 +62,10 @@
             }
 
             @include phone {
-                width: auto;
+                width: 80vw;
+                margin-bottom: 0px;
+                padding: 0;
+                padding-bottom: 50px;
             }
 
             .image-container {
@@ -80,6 +87,14 @@
                     border-radius: 5px;
                     background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7));
 
+                    @include tablet {
+                        height: 99%;
+                    }
+
+                    @include phone {
+                        height: 99%;
+                    }
+
                     .projet-title {
                         position: absolute;
                         bottom: 0;
@@ -94,6 +109,10 @@
                             bottom: 0;
                             margin: 20px;
                             color: whitesmoke;
+
+                            @include phone {
+                                font-size: xx-small;
+                            }
                         }
                     }
                 }
@@ -103,17 +122,31 @@
                 list-style-type: none;
                 display: flex;
 
+                @include phone {
+                    flex-wrap: wrap;
+                    justify-content: center;
+                }
+
                 .projet-li {
                     padding-right: 20px;
                     transition: transform 0.3s ease-in-out;
 
+                    @include phone {
+                        padding-right: 10px;
+                    }
+
                     .projet-attribut {
                         margin-top: 20px;
                         display: inline-block;
-                        padding: 10px 30px 10px 30px;
+                        padding: 10px 15px 10px 15px;
                         background-color: $portfolio-bleu-clair;
                         color: purple;
                         border-radius: 10px;
+
+                        @include phone {
+                            margin-top: 10px;
+                            font-size: xx-small;
+                        }
                     }
                 }
                 .projet-li:hover {
