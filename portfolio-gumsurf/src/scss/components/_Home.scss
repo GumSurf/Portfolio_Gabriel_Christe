@@ -4,15 +4,23 @@
     width: 100%; // La largeur de la div sera égale à 100% de la largeur disponible
 
     @include tablet {
-        height: 80vh;
+        height: 90vh;
     }
 
     @include phone {
-        height: 80vh;
+        height: 65vh;   
     }
 
     .background {
         overflow: hidden;
+
+        @include tablet {
+            overflow: visible;
+        }
+
+        @include phone {
+            overflow: visible;
+        }
 
         .rose_planete {
             position: absolute;
@@ -21,10 +29,14 @@
 
             @include tablet {
                 width: 300px;
+                right: 20vw;
+                margin-top: 65px;
             }
 
             @include phone {
                 width: 200px;
+                right: 20vw;
+                margin-top: 65px;
             }
         }
     }
@@ -50,7 +62,8 @@
 
         @include phone {
             padding-top: 60px;
-            padding-left: 125px;
+            padding-left: 30px;
+            padding-right: 30px;
         }
 
         .bienvenue {
@@ -58,7 +71,7 @@
             color: whitesmoke;
             padding-top: 100px;
             padding-bottom: 20px;
-            
+
             @include tablet {
                 font-size: 28px;
             }
@@ -94,7 +107,8 @@
             }
 
             @include phone {
-                width: 40vh;
+                width: 80vw;
+                padding-left: 0;
             }
 
             p {
@@ -125,12 +139,17 @@
 
             @include phone {
                 padding-left: 0px;
+                justify-content: center;
             }
 
             .div-link {
                 width: auto;
                 height: auto;
                 padding: 40px;
+
+                @include phone {
+                    padding: 12px;
+                }
 
                 .link {
                     padding: 20px;
@@ -142,6 +161,10 @@
                     &:hover {
                         background-color: $portfolio-bleu-clair;
                         color: $portfolio-violet;
+                    }
+
+                    @include phone {
+                        padding: 10px;
                     }
                 }
             }
