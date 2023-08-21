@@ -1,11 +1,10 @@
 import React from 'react';
-import Me from '../assets/Me.jpg';
 import Planete from '../assets/bleu_planete.webp';
 
 function Home() {
     return (
         <div>
-            <img className='planete_about' src={Planete} alt="planete" />
+            <img className='planete_about rotate-self' src={Planete} alt="planete" />
             <div className='About'>
                 <div className='competences_frontend'>
                     <h2>Développeur Frontend</h2>
