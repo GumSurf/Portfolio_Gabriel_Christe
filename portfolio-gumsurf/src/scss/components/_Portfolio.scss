@@ -7,6 +7,16 @@
     justify-content: center;
     align-items: center;
 
+    @include tablet {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+    @include phone {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
     .title {
         margin-top: 70px;
         display: inline-block;
@@ -26,12 +36,30 @@
         margin-top: 70px;
         margin-bottom: 150px;
 
+        @include tablet {
+            margin-top: 0px;
+            padding: 0px;
+        }
+
+        @include phone {
+            margin-top: 0px;
+            padding: 0px;
+        }
+
         .projet {
             width: 100vh;
             height: auto;
             margin-bottom: 100px;
             padding: 50px;
             border-radius: 10px;
+
+            @include tablet {
+                width: auto;
+            }
+
+            @include phone {
+                width: auto;
+            }
 
             .image-container {
                 position: relative;

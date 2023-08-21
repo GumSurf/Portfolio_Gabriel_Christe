@@ -8,15 +8,10 @@
         background-color: $portfolio-background;
         padding: 40px;
         border-radius: 10px;
-        margin: 0 20%;
-        display: flex;
-        flex-direction: column;
-        align-items: stretch;
         min-width: 0;
 
         form {
             max-width: 500px;
-            margin: 0 auto;
             display: grid;
             gap: 20px;
 
@@ -82,16 +77,8 @@
         }
     }
 
-    .onde_satellite {
-        position: relative;
-        right: -35px;
-        top: -90px;
-        width: 150px;
-        transform: rotate(-50deg);
-        z-index: 3;
-    }
-
     .satellite_about {
+        margin-left: 200px;
         width: 200px;
     }
 }

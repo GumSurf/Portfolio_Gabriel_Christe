@@ -3,6 +3,14 @@
     height: 100vh; // La hauteur de la div sera égale à 100% de la hauteur de l'écran
     width: 100%; // La largeur de la div sera égale à 100% de la largeur disponible
 
+    @include tablet {
+        height: 80vh;
+    }
+
+    @include phone {
+        height: 80vh;
+    }
+
     .background {
         overflow: hidden;
 
@@ -10,35 +18,14 @@
             position: absolute;
             bottom: 35vh;
             right: 20vh;
-        }
 
-        .planete3 {
-            position: fixed;
-            width: 300px;
-            right: -10vh;
-            top: -100px;
-        }
+            @include tablet {
+                width: 300px;
+            }
 
-        .planete1 {
-            position: fixed;
-            right: -15vh;
-            bottom: -250px;
-            z-index: -1;
-        }
-
-        .asteroide {
-            position: fixed;
-            width: 100px;
-            bottom: -200px;
-            left: 30vh;
-            z-index: -1;
-        }
-
-        .planete4 {
-            position: fixed;
-            top: -200px;
-            left: -150px;
-            z-index: -1;
+            @include phone {
+                width: 200px;
+            }
         }
     }
 
@@ -56,11 +43,29 @@
         padding-left: 250px;
         z-index: 10;
 
+        @include tablet {
+            padding-top: 60px;
+            padding-left: 125px;
+        }
+
+        @include phone {
+            padding-top: 60px;
+            padding-left: 125px;
+        }
+
         .bienvenue {
             font-size: 38px;
             color: whitesmoke;
             padding-top: 100px;
             padding-bottom: 20px;
+            
+            @include tablet {
+                font-size: 28px;
+            }
+
+            @include phone {
+                font-size: 20px;
+            }
         }
 
         h1 {
@@ -70,16 +75,43 @@
             width: 100vh;
         }
 
+        .typewriter {
+            @include tablet {
+                font-size: medium;
+            }
+
+            @include phone {
+                font-size: x-small;
+            }
+        }
+
         .div-p {
             padding-left: 90px;
             width: 625px;
+
+            @include tablet {
+                width: 40vh;
+            }
+
+            @include phone {
+                width: 40vh;
+            }
 
             p {
                 padding-top: 40px;
                 font-size: x-large;
                 text-align: center;
                 color: white;
+
+                @include tablet {
+                    font-size: small;
+                }
+
+                @include phone {
+                    font-size: xx-small;
+                }
             }
+
         }
 
         .div-links {
@@ -87,14 +119,18 @@
             padding-left: 150px;
             padding-top: 20px;
 
+            @include tablet {
+                padding-left: 0px;
+            }
+
+            @include phone {
+                padding-left: 0px;
+            }
+
             .div-link {
                 width: auto;
                 height: auto;
                 padding: 40px;
-
-                &:hover {
-                    transform: translateY(-2px);
-                }
 
                 .link {
                     padding: 20px;

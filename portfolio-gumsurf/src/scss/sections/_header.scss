@@ -1,5 +1,19 @@
 // _header.scss
 
+// Mixin pour les media queries de tablette
+@mixin tablet {
+    @media (min-width: 768px) and (max-width: 1024px) {
+        @content;
+    }
+}
+
+// Mixin pour les media queries de téléphone
+@mixin phone {
+    @media (max-width: 767px) {
+        @content;
+    }
+}
+
 .portfolio-header {
     // Styles spécifiques à l'en-tête du portfolio
     display: flex;
@@ -11,10 +25,30 @@
     z-index: 60;
     transition: background-color 0.3s;
 
+    @include tablet {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+
+    @include phone {
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+
     .div-logo {
         width: 200px;
         height: auto;
         padding: 10px;
+
+        @include tablet {
+            width: 100px;
+            margin-right: 30%;
+        }
+    
+        @include phone {
+            width: 75px;
+            margin-right: 10vh;
+        }
 
         .lien-img {
             // Styles du lien contenant l'image
@@ -31,85 +65,86 @@
             }
         }
     }
-/* Sidenav menu */
-.sidenav {
-    height: 100%;
-    width: 350px;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    right: -350px;
-    background-color: #201057;
-    padding-top: 60px;
-    transition: right 0.5s ease;
-  }
-  
-  .sidenav ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-  }
-  
-  /* Sidenav menu links */
-  .sidenav a {
-    padding: 8px 8px 8px 32px;
-    text-decoration: none;
-    font-size: 25px;
-    color: #f1f1f1f1;
-    display: block;
-    transition: 0.3s;
-    display: flex;
-    align-items: center;
-  }
 
-  .sidenav p {
-    display: inline-block;
-    vertical-align: middle;
-  }
+    /* Sidenav menu */
+    .sidenav {
+        height: 100%;
+        width: 350px;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        right: -350px;
+        background-color: #201057;
+        padding-top: 60px;
+        transition: right 0.5s ease;
+    }
 
-  .planete {
-    display: inline-block;
-    vertical-align: middle;
-    width: 80px;
-    margin-left: auto;
-  }
+    .sidenav ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
 
-  .satellite {
-    display: inline-block;
-    vertical-align: middle;
-    width: 60px;
-    margin-left: auto;
-  }
-  
-  .sidenav a:hover {
-    color: $portfolio-bleu-clair;
-  }
-  
-  /* Active class */
-  .sidenav.active {
-    right: 0;
-  }
-  
-  /* Close btn */
-  .sidenav .close {
-    position: absolute;
-    top: 0;
-    right: 25px;
-    font-size: 36px;
-  }
+    /* Sidenav menu links */
+    .sidenav a {
+        padding: 8px 8px 8px 32px;
+        text-decoration: none;
+        font-size: 25px;
+        color: #f1f1f1f1;
+        display: block;
+        transition: 0.3s;
+        display: flex;
+        align-items: center;
+    }
 
-  .burger-icon {
-    display: block;
-    margin-top: 35px;
-  }
-  
-  .burger-icon span {
-    display: block;
-    width: 35px;
-    height: 5px;
-    background-color: $portfolio-bleu-clair;
-    margin: 6px 0;
-  }
+    .sidenav p {
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    .planete {
+        display: inline-block;
+        vertical-align: middle;
+        width: 80px;
+        margin-left: auto;
+    }
+
+    .satellite {
+        display: inline-block;
+        vertical-align: middle;
+        width: 60px;
+        margin-left: auto;
+    }
+
+    .sidenav a:hover {
+        color: $portfolio-bleu-clair;
+    }
+
+    /* Active class */
+    .sidenav.active {
+        right: 0;
+    }
+
+    /* Close btn */
+    .sidenav .close {
+        position: absolute;
+        top: 0;
+        right: 25px;
+        font-size: 36px;
+    }
+
+    .burger-icon {
+        display: block;
+        margin-top: 35px;
+    }
+
+    .burger-icon span {
+        display: block;
+        width: 35px;
+        height: 5px;
+        background-color: $portfolio-bleu-clair;
+        margin: 6px 0;
+    }
 
     .header-links {
         // Styles de la liste des liens de l'en-tête
