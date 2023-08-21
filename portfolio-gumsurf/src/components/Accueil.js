@@ -19,10 +19,6 @@ function Home() {
         <div className='home'>
             <div className='background'>
                 <img className='rose_planete move-top-bottom' src={rosePlanete} alt="planete rose" />
-                <img className='planete3 rotate-self' src={planete3} alt="asteroide" />
-                <img className='planete1 rotate-self' src={planete1} alt="planete" />
-                <img className='asteroide move-right-left-rotate' src={asteroide} alt="asteroide" />
-                <img className='planete4 rotate-self' src={planete4} alt="planete" />
             </div>
             <div className='conteneur'>
                 <div>
