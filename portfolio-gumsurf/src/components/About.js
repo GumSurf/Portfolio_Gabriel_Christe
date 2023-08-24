@@ -3,7 +3,7 @@ import Planete from '../assets/bleu_planete.webp';
 
 function Home() {
     return (
-        <div className='div_planete_about'>
+        <div id='About' className='div_planete_about'>
             <img className='planete_about rotate-self' src={Planete} alt="planete" />
             <div className='About'>
                 <div className='competences_frontend'>
