@@ -1,10 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import rosePlanete from '../assets/rose_planete.webp';
-import planete3 from '../assets/planete2.webp';
-import planete1 from '../assets/planete1.webp';
-import asteroide from '../assets/asteroide1.svg';
-import planete4 from '../assets/planete5.webp';
 import Typewriter from './TypeWriter';
 
 function Home() {
@@ -16,7 +12,7 @@ function Home() {
       ];
 
     return (
-        <div className='home'>
+        <div id="Accueil" className='home'>
             <div className='background'>
                 <img className='rose_planete move-top-bottom' src={rosePlanete} alt="planete rose" />
             </div>
