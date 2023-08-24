@@ -3,6 +3,11 @@
     align-items: center;
     padding: 10px 100px 10px 100px;
 
+    @include phone {
+        flex-direction: column-reverse;
+        padding: 10px 30px 10px 30px;
+    }
+
     .div-logo {
         width: 100px;
         height: auto;
@@ -31,6 +36,13 @@
         margin-left: 36%;
         margin-right: auto;
 
+        @include tablet {
+            margin-left: auto;
+        }
+    
+        @include phone {
+            margin-left: auto;
+        }
         
         .li-links {
             // Styles des éléments de liste
@@ -38,10 +50,29 @@
             padding-right: 100px;
             width: 50px;
             height: auto;
+
+            @include tablet {
+                height: 100%;
+            }
+        
+            @include phone {
+                height: 100%;
+                margin-bottom: 20px;
+            }
              
             img {
-                width: 100%;
+                width: 50px;
                 height: 100%;
+            }
+        }
+        
+        .linkedin {
+            @include tablet {
+                padding-right: 0px;
+            }
+        
+            @include phone {
+                padding-right: 0px;
             }
         }
     }
@@ -49,10 +80,22 @@
     .footer-contact {
         list-style: none;
 
+        @include phone {
+            margin-bottom: 20px;
+        }
+
         li p {
             margin-block-start: 0;
             margin-bottom: 5px;
             color: white;
+
+            @include tablet {
+                font-size: xx-small;
+            }
+        
+            @include phone {
+                font-size: small;
+            }
         }
     }
 }
