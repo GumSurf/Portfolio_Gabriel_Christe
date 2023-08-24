@@ -25,7 +25,7 @@ function Contact() {
 
 
     return (
-        <div className='contact'>
+        <div id='Contact' className='contact'>
             <div className='background-color'>
                 <form onSubmit={handleSubmit(onSubmit)}>
                     <div className='div-color'>
