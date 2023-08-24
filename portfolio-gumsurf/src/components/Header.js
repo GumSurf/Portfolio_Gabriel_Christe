@@ -4,7 +4,6 @@ import React, { useEffect, useRef } from "react";
 import Planete1 from '../assets/rose_planete.webp';
 import Planete2 from '../assets/bleu_planete.webp';
 import Planete3 from '../assets/violette_planete.webp';
-import Planete4 from '../assets/planete1.webp';
 import Satellite from '../assets/satellite.webp';
 
 function Header() {
@@ -55,34 +54,28 @@ function Header() {
                 <Link id="closeNavBtn" to="#" class="close" onClick={handleCloseNav}>&times;</Link>
                 <ul>
                     <li>
-                        <Link to='/Portfolio_GumSurf/'>
+                        <a href='#Accueil'>
                             <p>Accueil</p>
                             <img className='planete' src={Planete1} alt="planete" />
-                        </Link>
+                        </a>
                     </li>
                     <li>
-                        <Link to='/Portfolio'>
+                        <a href='#Portfolio'>
                             <p>Portfolio</p>
                             <img className='planete' src={Planete2} alt="planete" />
-                        </Link>
+                        </a>
                     </li>
                     <li>
-                        <Link to='/About'>
+                        <a href='#About'>
                             <p>A propos de moi</p>
                             <img className='planete' src={Planete3} alt="planete" />
-                        </Link>
+                        </a>
                     </li>
                     <li>
-                        <Link to='/Contact'>
+                        <a href='#Contact'>
                             <p>Contact</p>
                             <img className='satellite' src={Satellite} alt="satellite" />
-                        </Link>
-                    </li>
-                    <li>
-                        <Link to='/Planetes'>
-                            <p>Planetes</p>
-                            <img className='planete' src={Planete4} alt="planete" />
-                        </Link>
+                        </a>
                     </li>
                 </ul>
             </div>
