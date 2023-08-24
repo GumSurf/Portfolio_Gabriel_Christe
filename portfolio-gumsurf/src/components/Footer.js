@@ -10,10 +10,10 @@ function Footer() {
                 <Link className='lien-img' to='https://gumsurf.github.io/Portfolio_GumSurf/'><img className="header-logo" src={LOGO} alt="Logo" /></Link>
             </div>
             <ul className='footer-links'>
-                <li className='li-links'>
+                <li className='li-links github'>
                     <Link to='https://github.com/GumSurf'><img src={Github} alt="Logo Github"/></Link>
                 </li>
-                <li className='li-links'>
+                <li className='li-links linkedin'>
                     <Link to='https://www.linkedin.com/in/gabriel-christe-000/'><img src={Linkedin} alt="Logo Linkedin"/></Link>
                 </li>
             </ul>
