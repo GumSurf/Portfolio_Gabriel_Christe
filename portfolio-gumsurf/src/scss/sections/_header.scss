@@ -7,7 +7,6 @@
     }
 }
 
-// Mixin pour les media queries de téléphone
 @mixin phone {
     @media (max-width: 767px) {
         @content;
@@ -15,7 +14,6 @@
 }
 
 .portfolio-header {
-    // Styles spécifiques à l'en-tête du portfolio
     display: flex;
     justify-content: space-between;
     padding-left: 100px;
@@ -41,12 +39,10 @@
         padding: 10px;
 
         @include tablet {
-            width: 100px;
             margin-right: 30%;
         }
     
         @include phone {
-            width: 75px;
             margin-right: 10vh;
         }
 
@@ -77,6 +73,14 @@
         background-color: #201057;
         padding-top: 60px;
         transition: right 0.5s ease;
+
+        @include tablet {
+            width: 250px;
+        }
+
+        @include phone {
+            width: 200px;
+        }
     }
 
     .sidenav ul {
