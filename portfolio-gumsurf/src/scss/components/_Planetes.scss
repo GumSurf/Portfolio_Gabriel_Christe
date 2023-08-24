@@ -5,12 +5,45 @@
     justify-content: space-around;
     margin-top: 100px;
 
+    @include tablet {
+        height: auto;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    @include phone {
+        height: auto;
+        flex-direction: column;
+        align-items: center;
+    }
+
     .lien {
+
+        @include tablet {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        @include phone {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
         .rose_planete {
             position: relative;
             width: 450px;
             z-index: 21;
             transition: transform 0.3s ease-out;
+
+            @include tablet {
+                width: 350px;
+            }
+
+            @include phone {
+                width: 250px;
+            }
         }
 
         .rose_planete:hover {
@@ -22,6 +55,14 @@
             position: relative;
             z-index: 21;
             transition: transform 0.3s ease-out;
+
+            @include tablet {
+                width: 280px;
+            }
+
+            @include phone {
+                width: 230px;
+            }
         }
 
         .bleu_planete:hover {
@@ -33,6 +74,14 @@
             position: relative;
             z-index: 21;
             transition: transform 0.3s ease-out;
+
+            @include tablet {
+                width: 300px;
+            }
+
+            @include phone {
+                width: 240px;
+            }
         }
 
         .violette_planete:hover {
@@ -44,6 +93,16 @@
             position: relative;
             z-index: 21;
             transition: transform 0.3s ease-out;
+
+            @include tablet {
+                width: 200px;
+                height: auto;
+            }
+
+            @include phone {
+                width: 150px;
+                height: auto;
+            }
         }
 
         .satellite:hover {
@@ -52,6 +111,16 @@
     }
 
     .planete {
+        @include tablet {
+            padding: 70px;
+            margin-bottom: 50px;
+        }
+
+        @include phone {
+            padding: 70px;
+            margin-bottom: 50px;
+        }
+
         .nom {
             position: relative;
             display: block;
@@ -62,6 +131,14 @@
             font-size: xx-large;
             transition: opacity 0.3s ease-out;
             z-index: 50;
+
+            @include tablet {
+                opacity: 1;
+            }
+
+            @include phone {
+                opacity: 1;
+            }
         }
     }
 
