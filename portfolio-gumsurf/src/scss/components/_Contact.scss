@@ -4,16 +4,36 @@
     align-items: center;
     height: 100vh;
 
+    @include phone {
+        flex-direction: column-reverse;
+    }
+
     .background-color {
         background-color: $portfolio-background;
         padding: 40px;
         border-radius: 10px;
         min-width: 0;
 
+        @include tablet {
+            margin-left: 150px;
+        }
+
+        @include phone {
+            width: 100%;
+            border-radius: 0px;
+            padding: 40px 0px 40px 0px;
+            margin-bottom: 100px;
+        }
+
         form {
             max-width: 500px;
             display: grid;
             gap: 20px;
+
+            @include phone {
+                max-width: initial;
+                justify-content: center;
+            }
 
             .div-color {
                 display: flex;
@@ -80,5 +100,17 @@
     .satellite_about {
         margin-left: 200px;
         width: 200px;
+
+        @include tablet {
+            margin-right: 50px;
+            margin-left: 50px;
+        }
+
+        @include phone {
+            margin-left: 0px;
+            margin-bottom: 50px;
+            margin-top: 75px;
+            width: 125px;
+        }
     }
 }
