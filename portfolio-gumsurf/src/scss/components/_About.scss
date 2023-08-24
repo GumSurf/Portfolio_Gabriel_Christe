@@ -1,136 +1,186 @@
-.planete_about {
-    display: block;
-    margin: 0 auto;
-}
+.div_planete_about {
+    padding-top: 25px;
 
-.About {
-    padding: 94px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    .competences_frontend {
-        background-color: #201057;
-        color: whitesmoke;
-        display: flex;
-        flex-direction: column;
-        padding: 80px;
-        height: 550px;
-        border-right: 1px solid #00cccc;
-        border-top-left-radius: 10px;
-        border-bottom-left-radius: 10px;
-
-        * {
-            text-align: center;
-        }
-
-        :nth-child(1) {
-            margin: 30px;
-        }
-
-        :nth-child(2) {
-            margin: 20px;
-        }
-
-        :nth-child(3) {
-            margin: 10px;
-        }
-
-        :nth-child(4) {
-            margin: 20px;
-        }
-
-        h2:nth-child(1) {
-            margin: 30px;
-            color: $portfolio-bleu-clair;
-            font-size: 40px;
-        }
-
-        p:nth-child(2) {
-            margin: 20px;
-            color: $portfolio-bleu-clair;
-            font-size: 30px;
-        }
-
-        p:nth-child(4) {
-            margin: 20px;
-            color: $portfolio-bleu-clair;
-            font-size: 30px;
-        }
-
-        li {
-            margin: 20px;
-        }
+    .planete_about {
+        display: block;
+        margin: 0 auto;
     }
 
-    .competences_backend {
-        background-color: #201057;
-        color: whitesmoke;
+    .About {
+        padding: 94px;
         display: flex;
-        flex-direction: column;
-        border-left: 1px solid #00cccc;
-        border-top-right-radius: 10px;
-        border-bottom-right-radius: 10px;
-        padding: 80px;
-        height: 550px;
+        justify-content: center;
+        align-items: center;
 
-        * {
-            text-align: center;
+        @include tablet {
+            flex-direction: column;
         }
 
-        :nth-child(1) {
-            margin: 30px;
+        @include phone {
+            flex-direction: column;
+            padding: 0;
         }
 
-        :nth-child(2) {
-            margin: 20px;
+        .competences_frontend {
+            background-color: #201057;
+            color: whitesmoke;
+            display: flex;
+            flex-direction: column;
+            padding: 80px;
+            height: 74vh;
+            border-right: 1px solid #00cccc;
+            border-top-left-radius: 10px;
+            border-bottom-left-radius: 10px;
+
+            @include tablet {
+                height: auto;
+                border: 2px solid #00cccc;
+                border-radius: 10px;
+                margin-bottom: 30px;
+            }
+
+            @include phone {
+                width: 100vw;
+                padding: 0;
+                margin-top: 50px;
+                background-color: #201057;
+                border-top: 2px solid #00cccc;
+                border-bottom: 2px solid #00cccc;
+                border-right: 0px solid #00cccc;
+                margin-bottom: 30px;
+                border-radius: 0px;
+            }
+
+            * {
+                text-align: center;
+            }
+
+            :nth-child(1) {
+                margin: 30px;
+            }
+
+            :nth-child(2) {
+                margin: 20px;
+            }
+
+            :nth-child(3) {
+                margin: 10px;
+            }
+
+            :nth-child(4) {
+                margin: 20px;
+            }
+
+            h2:nth-child(1) {
+                margin: 30px;
+                color: $portfolio-bleu-clair;
+                font-size: 40px;
+            }
+
+            p:nth-child(2) {
+                margin: 20px;
+                color: $portfolio-bleu-clair;
+                font-size: 30px;
+            }
+
+            p:nth-child(4) {
+                margin: 20px;
+                color: $portfolio-bleu-clair;
+                font-size: 30px;
+            }
+
+            li {
+                margin: 20px;
+            }
         }
 
-        :nth-child(3) {
-            margin: 10px;
+        .competences_backend {
+            background-color: #201057;
+            color: whitesmoke;
+            display: flex;
+            flex-direction: column;
+            border-left: 1px solid #00cccc;
+            border-top-right-radius: 10px;
+            border-bottom-right-radius: 10px;
+            padding: 80px;
+            height: 74vh;
+
+            @include tablet {
+                border: 2px solid #00cccc;
+                border-radius: 10px;
+                height: auto;
+            }
+
+            @include phone {
+                width: 100vw;
+                height: auto;
+                padding: 0;
+                margin-top: 50px;
+                background-color: #201057;
+                border-top: 2px solid #00cccc;
+                border-bottom: 2px solid #00cccc;
+                border-right: 0px solid #00cccc;
+                border-radius: 0px;
+            }
+
+            * {
+                text-align: center;
+            }
+
+            :nth-child(1) {
+                margin: 30px;
+            }
+
+            :nth-child(2) {
+                margin: 20px;
+            }
+
+            :nth-child(3) {
+                margin: 10px;
+            }
+
+            :nth-child(4) {
+                margin: 20px;
+            }
+
+            h2:nth-child(1) {
+                margin: 30px;
+                color: $portfolio-bleu-clair;
+                font-size: 40px;
+            }
+
+            p:nth-child(2) {
+                margin: 20px;
+                color: $portfolio-bleu-clair;
+                font-size: 30px;
+            }
+
+            p:nth-child(4) {
+                margin: 20px;
+                color: $portfolio-bleu-clair;
+                font-size: 30px;
+            }
+
+            li:nth-child(1) {
+                margin: 20px;
+            }
+
+            li {
+                margin: 20px;
+            }
         }
 
-        :nth-child(4) {
-            margin: 20px;
+        .onde-icon {
+            display: block;
+            margin-top: 35px;
         }
 
-        h2:nth-child(1) {
-            margin: 30px;
-            color: $portfolio-bleu-clair;
-            font-size: 40px;
-        }
-
-        p:nth-child(2) {
-            margin: 20px;
-            color: $portfolio-bleu-clair;
-            font-size: 30px;
-        }
-
-        p:nth-child(4) {
-            margin: 20px;
-            color: $portfolio-bleu-clair;
-            font-size: 30px;
-        }
-
-        li:nth-child(1) {
-            margin: 20px;
-        }
-
-        li {
-            margin: 20px;
+        .onde-icon span {
+            display: block;
+            width: 35px;
+            height: 5px;
+            background-color: #00cccc;
+            margin: 6px 0;
         }
     }
-
-    .onde-icon {
-        display: block;
-        margin-top: 35px;
-      }
-      
-      .onde-icon span {
-        display: block;
-        width: 35px;
-        height: 5px;
-        background-color: #00cccc;
-        margin: 6px 0;
-      }
 }
