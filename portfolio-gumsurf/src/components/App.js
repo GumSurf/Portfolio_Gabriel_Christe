@@ -1,6 +1,5 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
-import Planetes from './Planetes';
 import Header from './Header';
 import Footer from './Footer';
 import MainPage from './Main';
@@ -13,8 +12,7 @@ function App() {
       <Header />
 
       <Routes>
-        <Route path="/Planetes" element={<Planetes />} />
-        <Route path="/Portfolio_GumSurf/" element={<MainPage />} />
+        <Route path="/Portfolio_Gabriel_Christe/" element={<MainPage />} />
         <Route path='*' element={<NotFound />}/>
       </Routes>
 
