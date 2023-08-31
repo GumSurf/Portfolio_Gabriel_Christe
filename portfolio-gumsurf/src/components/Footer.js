@@ -1,6 +1,6 @@
-import LOGO from '../assets/Logo-Gabriel-CHRISTE.png'
-import Github from '../assets/Github.png'
-import Linkedin from '../assets/Linkedin.png'
+import LOGO from '../assets/Logo-Gabriel-CHRISTE.webp'
+import Github from '../assets/Github.webp'
+import Linkedin from '../assets/Linkedin.webp'
 import { Link } from 'react-router-dom';
 
 function Footer() {
