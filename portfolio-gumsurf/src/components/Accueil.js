@@ -21,8 +21,8 @@ function Home() {
                     <p className='bienvenue'>Gabriel Christe</p>
                     <Typewriter messages={messages} />
                     <div className='div-p'>
-                        <p>Besoin d'un site vitrine ou e-commerce ? Donnez vie à votre projet web avec mes
-                            compétences en développement réactif HTML, CSS, et JavaScript.</p>
+                        <p>En formation chez OpenClassrooms pour devenir développeur web fullstack (Bac+2). 
+                            Passionné par la création d'expériences numériques captivantes et fonctionnelles.</p>
                     </div>
                     <div className='div-links'>
                         <div className='div-link'>
