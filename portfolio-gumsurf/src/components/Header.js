@@ -1,4 +1,4 @@
-import ImgLogo from '../assets/Logo-Gabriel-CHRISTE.png';
+import ImgLogo from '../assets/Logo-Gabriel-CHRISTE.webp';
 import { Link } from 'react-router-dom';
 import React, { useEffect, useRef } from "react";
 import Planete1 from '../assets/rose_planete.webp';
@@ -50,8 +50,8 @@ function Header() {
             <div className='div-logo'>
                 <Link className='lien-img' to='/Portfolio_GumSurf/'><img id='logo' className="header-logo" src={ImgLogo} alt="Logo Kasa" /></Link>
             </div>
-            <div id="mySidenav" class="sidenav" ref={sidenavRef}>
-                <Link id="closeNavBtn" to="#" class="close" onClick={handleCloseNav}>&times;</Link>
+            <div id="mySidenav" className="sidenav" ref={sidenavRef}>
+                <Link id="closeNavBtn" to="#" className="close" onClick={handleCloseNav}>&times;</Link>
                 <ul>
                     <li>
                         <a href='#Accueil'>
@@ -80,7 +80,7 @@ function Header() {
                 </ul>
             </div>
             <Link to="#" id="openNavBtn" className='shack' onClick={handleOpenNav}>
-                <span class="burger-icon">
+                <span className="burger-icon">
                     <span></span>
                     <span></span>
                     <span></span>
