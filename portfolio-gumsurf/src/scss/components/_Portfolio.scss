@@ -132,6 +132,11 @@
                                 padding: 20px;
                                 color: $portfolio-bleu-clair;
                                 border-radius: 30px;
+
+                                @include phone {
+                                    padding: 10px;
+                                    font-size: xx-small;
+                                }
                             }
                         }
                     }
