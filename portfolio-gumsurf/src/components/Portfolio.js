@@ -120,7 +120,7 @@ function Body() {
                         <div className='overlay'>
                             <h2 className='projet-title'>Sophie Bluel</h2>
                             <div className='div-projet-filtre'>
-                                <p className='projet-filtre'>Site Html / Css || Site web portfolio d'une architect d'intérieur</p>
+                                <p className='projet-filtre'>Site Html / Css || Site web portfolio d'une architecte d'intérieur</p>
                                 <div className='div-cliquez-ici'>
                                     <p className='cliquez-ici'>Cliquez ici !</p>
                                 </div>
