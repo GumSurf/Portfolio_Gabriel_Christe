@@ -1,6 +1,6 @@
 import React from 'react';
 import NinaCarducci from '../assets/NinaCarducci.webp';
-import Booki from '../assets/Booki.webp';
+import MonVieuxGrimoire from '../assets/MonVieuxGrimoire.webp';
 import Kasa from '../assets/Kasa.webp';
 import SophieBluel from '../assets/SophieBluel.webp';
 import { Link } from 'react-router-dom';
@@ -121,9 +121,6 @@ function Body() {
                             <h2 className='projet-title'>Sophie Bluel</h2>
                             <div className='div-projet-filtre'>
                                 <p className='projet-filtre'>Site Html / Css || Site web portfolio d'une architecte d'intérieur</p>
-                                <div className='div-cliquez-ici'>
-                                    <p className='cliquez-ici'>Cliquez ici !</p>
-                                </div>
                             </div>
                         </div>
                     </div>
@@ -164,32 +161,27 @@ function Body() {
                     </div>
                 </div>
                 <div className='Booki, projet'>
-                    <Link to="https://gumsurf.github.io/Booki/">
                         <div className="image-container">
-                            <img src={Booki} alt="site web Booki" />
+                            <img src={MonVieuxGrimoire} alt="site web Mon Vieux Grimoire" />
                             <div className='overlay'>
-                                <Link to="https://gumsurf.github.io/Booki/"><h2 className='projet-title'>Booki</h2></Link>
+                                <h2 className='projet-title'>Mon Vieux Grimoire</h2>
                                 <div className='div-projet-filtre'>
-                                    <p className='projet-filtre'>Site Html / Css || Responsive || Site web d'une agence de voyage</p>
-                                    <div className='div-cliquez-ici'>
-                                        <p className='cliquez-ici'>Cliquez ici !</p>
-                                    </div>
+                                    <p className='projet-filtre'>Site Backend, Node.js, Express.js, MongoDb || Site web de notation de livres</p>
                                 </div>
                             </div>
                         </div>
-                    </Link>
                     <div className='div-competences-problemes'>
                         <div className='div-competences'>
                             <h2 className='title-competences'>Compétences apprises</h2>
                             <ul className='projet-ul'>
                                 <li className='projet-li'>
-                                    <p className='projet-attribut'>Responsive</p>
+                                    <p className='projet-attribut'>Node.js</p>
                                 </li>
                                 <li className='projet-li'>
-                                    <p className='projet-attribut'>JavaScript</p>
+                                    <p className='projet-attribut'>Express.js</p>
                                 </li>
                                 <li className='projet-li'>
-                                    <p className='projet-attribut'>Html / Css</p>
+                                    <p className='projet-attribut'>MongoDb</p>
                                 </li>
                             </ul>
                         </div>
@@ -198,13 +190,13 @@ function Body() {
                             <div className='background-problemes'>
                                 <ul className='ul-problemes'>
                                     <li className='li-problemes'>
-                                        <p className='problemes'>Nesting Incorrect (Hiérarchie incorrecte)</p>
+                                        <p className='problemes'>Performances inadéquates</p>
                                     </li>
                                     <li className='li-problemes'>
-                                        <p className='problemes'>Gestion des Médias Queries</p>
+                                        <p className='problemes'>Gestion des erreurs négligée</p>
                                     </li>
                                     <li className='li-problemes'>
-                                        <p className='problemes'>Rendu Différent sur Divers Navigateurs</p>
+                                        <p className='problemes'>Sécurité insuffisante</p>
                                     </li>
                                 </ul>
                             </div>
