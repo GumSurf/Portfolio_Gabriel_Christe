@@ -3,7 +3,6 @@ import { Routes, Route } from 'react-router-dom';
 import Header from './Header';
 import Footer from './Footer';
 import MainPage from './Main';
-import NotFound from './NotFound';
 import '../css/style.css'
 
 function App() {
