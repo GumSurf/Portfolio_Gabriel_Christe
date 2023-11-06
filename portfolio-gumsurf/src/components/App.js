@@ -13,7 +13,6 @@ function App() {
 
       <Routes>
         <Route path="/Portfolio_Gabriel_Christe/" element={<MainPage />} />
-        <Route path='*' element={<NotFound />}/>
       </Routes>
 
       <Footer />
