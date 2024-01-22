@@ -45,10 +45,6 @@
   "devDependencies": {
     "@wixc3/react-board": "^2.3.0",
     "gh-pages": "^5.0.0",
-<<<<<<< HEAD
     "react-scripts": "^5.0.1"
-=======
-    "react-scripts": "^2.1.8"
->>>>>>> 1a35796346c7d763da929e8b50df7c16586aa4bc
   }
 }
