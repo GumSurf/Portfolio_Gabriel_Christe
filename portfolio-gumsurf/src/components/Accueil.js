@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import rosePlanete from '../assets/rose_planete.webp';
 import Typewriter from './TypeWriter';
 
@@ -26,10 +25,10 @@ function Home() {
                     </div>
                     <div className='div-links'>
                         <div className='div-link'>
-                            <Link className='link' to="/Contact">Contactez-moi</Link>
+                        <a href='#Contact'>Contactez-moi</a>
                         </div>
                         <div className='div-link'>
-                            <Link className='link' to="/Portfolio">Voir les projets</Link>
+                        <a href='#Portfolio'>Voir les projets</a>
                         </div>
                     </div>
                 </div>
