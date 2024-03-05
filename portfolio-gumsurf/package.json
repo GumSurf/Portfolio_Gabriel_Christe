@@ -2,7 +2,7 @@
   "name": "portfolio-gabriel-christe",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://GumSurf.github.io/Portfolio_Gabriel_Christe/",
+  "homepage": "https://gumsurf.github.io/Portfolio_Gabriel_Christe/",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
