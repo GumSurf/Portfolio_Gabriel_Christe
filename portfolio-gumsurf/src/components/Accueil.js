@@ -25,10 +25,10 @@ function Home() {
                     </div>
                     <div className='div-links'>
                         <div className='div-link'>
-                        <a href='#Contact'>Contactez-moi</a>
+                        <a className='link' href='#Contact'>Contactez-moi</a>
                         </div>
                         <div className='div-link'>
-                        <a href='#Portfolio'>Voir les projets</a>
+                        <a className='link' href='#Portfolio'>Voir les projets</a>
                         </div>
                     </div>
                 </div>
