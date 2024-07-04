@@ -11,16 +11,13 @@ function TypeWriter() {
 
                 onInit={(typewriter) => {
                     typewriter
-                        .typeString("Développeur FrontEnd")
+                        .typeString("Développeur Front End")
                         .pauseFor(1500)
                         .deleteAll()
-                        .typeString("Développeur BackEnd")
+                        .typeString("Développeur Back End")
                         .pauseFor(1500)
                         .deleteAll()
-                        .typeString("Développeur FullStack")
-                        .pauseFor(1500)
-                        .deleteAll()
-                        .typeString("Désigner")
+                        .typeString("Développeur Full Stack")
                         .pauseFor(1500)
                         .deleteAll()
                         .start();

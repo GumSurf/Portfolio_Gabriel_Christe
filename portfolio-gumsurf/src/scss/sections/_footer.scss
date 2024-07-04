@@ -1,11 +1,25 @@
 .portfolio-footer {
     display: flex;
-    align-items: center;
+    flex-direction: column;
     padding: 10px 100px 10px 100px;
+    background-color: $background-color;
+    align-items: center;
+    padding-top: 5vh;
 
     @include phone {
-        flex-direction: column-reverse;
         padding: 10px 30px 10px 30px;
+    }
+
+    p {
+        text-align: center;
+        width: 30vw;
+        color: white;
+        margin-bottom: 2vh;
+
+        @include phone {
+            width: 90vw;
+            padding: 10px 30px 10px 30px;
+        }
     }
 
     .div-logo {
@@ -23,78 +37,6 @@
                 height: 100%;
                 width: 100%;
                 object-fit: cover;
-            }
-        }
-    }
-
-    .footer-links {
-        // Styles de la liste des liens de l'en-tête
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        list-style: none;
-        margin-left: 36%;
-        margin-right: auto;
-
-        @include tablet {
-            margin-left: auto;
-        }
-    
-        @include phone {
-            margin-left: auto;
-        }
-        
-        .li-links {
-            // Styles des éléments de liste
-            position: relative;
-            padding-right: 100px;
-            width: 50px;
-            height: auto;
-
-            @include tablet {
-                height: 100%;
-            }
-        
-            @include phone {
-                height: 100%;
-                margin-bottom: 20px;
-            }
-             
-            img {
-                width: 50px;
-                height: 100%;
-            }
-        }
-        
-        .linkedin {
-            @include tablet {
-                padding-right: 0px;
-            }
-        
-            @include phone {
-                padding-right: 0px;
-            }
-        }
-    }
-
-    .footer-contact {
-        list-style: none;
-
-        @include phone {
-            margin-bottom: 20px;
-        }
-
-        li p {
-            margin-block-start: 0;
-            margin-bottom: 5px;
-            color: white;
-
-            @include tablet {
-                font-size: xx-small;
-            }
-        
-            @include phone {
-                font-size: small;
             }
         }
     }

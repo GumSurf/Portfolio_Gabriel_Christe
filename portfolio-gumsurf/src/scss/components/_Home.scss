@@ -1,14 +1,20 @@
 .home {
     position: relative;
-    height: 100vh; // La hauteur de la div sera égale à 100% de la hauteur de l'écran
-    width: 100%; // La largeur de la div sera égale à 100% de la largeur disponible
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
 
     @include tablet {
         height: 90vh;
     }
 
     @include phone {
-        height: 65vh;   
+        height: 65vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
     .background {
@@ -23,9 +29,9 @@
         }
 
         .rose_planete {
-            position: absolute;
-            bottom: 35vh;
-            right: 20vh;
+            margin-top: 140px;
+            background-color: $background-color;
+            border-radius: 300px;
 
             @include tablet {
                 width: 300px;
@@ -34,7 +40,7 @@
             }
 
             @include phone {
-                width: 200px;
+                width: 150px;
                 right: 20vw;
                 margin-top: 65px;
             }
@@ -52,12 +58,11 @@
         flex-direction: row;
         position: relative;
         padding-top: 120px;
-        padding-left: 250px;
         z-index: 10;
 
         @include tablet {
             padding-top: 60px;
-            padding-left: 125px;
+            padding-left: 0px;
         }
 
         @include phone {
@@ -67,10 +72,8 @@
         }
 
         .bienvenue {
-            font-size: 38px;
-            color: whitesmoke;
-            padding-top: 100px;
-            padding-bottom: 20px;
+            font-size: 3rem;
+            color: $text;
 
             @include tablet {
                 font-size: 28px;
@@ -81,10 +84,29 @@
             }
         }
 
+        #title {
+            font-family: 'lato', sans-serif;
+            font-weight: 300;
+            font-size: 50px;
+            letter-spacing: 10px;
+            margin-top: 10px;
+            max-width: 700px;
+
+            @include tablet {
+                width: 430px;
+            }
+
+            @include phone {
+                height: 10px;
+                width: 200px;
+            }
+        }
+        
+
         h1 {
             font-size: 50px;
             z-index: 2;
-            color: $portfolio-orange;
+            color: $portfolio-violet;
             width: 100vh;
         }
 
@@ -99,8 +121,7 @@
         }
 
         .div-p {
-            padding-left: 90px;
-            width: 625px;
+            width: 30vw;
 
             @include tablet {
                 width: 40vh;
@@ -113,9 +134,9 @@
 
             p {
                 padding-top: 40px;
-                font-size: x-large;
-                text-align: center;
-                color: white;
+                font-size: 1.5em;
+                line-height: 1.5;
+                color: $text;
 
                 @include tablet {
                     font-size: small;
@@ -130,7 +151,6 @@
 
         .div-links {
             display: flex;
-            padding-left: 150px;
             padding-top: 20px;
 
             @include tablet {
@@ -147,20 +167,28 @@
                 height: auto;
                 padding: 40px;
 
+                @include tablet {
+                    padding: 20px;
+                }
+
                 @include phone {
                     padding: 12px;
                 }
 
                 .link {
                     padding: 20px;
-                    border: 2px solid $portfolio-bleu-clair;
-                    border-radius: 40px;
-                    color: white;
+                    border: 2px solid $background-color;
+                    color: $text;
                     transition: background-color 0.3s;
+                    border-radius: 9999px;
+
+                    @include tablet {
+                        padding: 10px;
+                    }
 
                     &:hover {
-                        background-color: $portfolio-bleu-clair;
-                        color: $portfolio-violet;
+                        background-color: $background-color;
+                        color: white;
                     }
 
                     @include phone {
@@ -179,7 +207,7 @@
         width: 400px;
         height: 400px;
         border-radius: 50%;
-        background-color: $portfolio-couleur-text;
+        background-color: $portfolio-violet;
 
         .div-img {
             display: flex;

@@ -16,11 +16,14 @@
 .portfolio-header {
     display: flex;
     justify-content: space-between;
+    height: 100px;
     padding-left: 100px;
     padding-right: 100px;
     position: sticky;
     top: 0;
     z-index: 60;
+    opacity: 96%;
+    background-color: $header;
     transition: background-color 0.3s;
 
     @include tablet {
@@ -41,7 +44,7 @@
         @include tablet {
             margin-right: 30%;
         }
-    
+
         @include phone {
             margin-right: 10vh;
         }
@@ -54,8 +57,8 @@
 
             .header-logo {
                 // Styles du logo
-                height: 100%;
-                width: 100%;
+                height: 50%;
+                width: 50%;
                 object-fit: cover;
                 transition: width 0.3s;
             }
@@ -70,16 +73,18 @@
         z-index: 1;
         top: 0;
         right: -350px;
-        background-color: #201057;
+        background-color: $background-header;
         padding-top: 60px;
         transition: right 0.5s ease;
 
         @include tablet {
             width: 250px;
+            background-color: $background-color;
         }
 
         @include phone {
             width: 200px;
+            background-color: $background-color;
         }
     }
 
@@ -94,7 +99,7 @@
         padding: 8px 8px 8px 32px;
         text-decoration: none;
         font-size: 25px;
-        color: #f1f1f1f1;
+        color: white;
         display: block;
         transition: 0.3s;
         display: flex;
@@ -121,7 +126,7 @@
     }
 
     .sidenav a:hover {
-        color: $portfolio-bleu-clair;
+        color: white;
     }
 
     /* Active class */
@@ -146,7 +151,7 @@
         display: block;
         width: 35px;
         height: 5px;
-        background-color: $portfolio-bleu-clair;
+        background-color: $second-color-text;
         margin: 6px 0;
     }
 
@@ -165,7 +170,7 @@
             a {
                 // Styles des liens de l'en-tête
                 text-decoration: none;
-                color: whitesmoke;
+                color: $text;
                 list-style: none;
                 position: relative;
 
@@ -176,7 +181,7 @@
                     left: 0; // Position de départ de la barre (juste en dessous du premier lien)
                     width: 0; // Largeur initiale de la barre (0 pour la cacher)
                     height: 2px; // Hauteur de la barre
-                    background-color: whitesmoke; // Couleur de la barre
+                    background-color: $text; // Couleur de la barre
                     transition: left 0.3s, width 0.3s; // Transition de 0.3 seconde pour l'animation de la position et de la largeur
                 }
 
@@ -192,4 +197,69 @@
             }
         }
     }
+
+    .ul-ecran-large {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        margin-top: 25px;
+      }
+      
+      .ul-ecran-large li {
+        display: flex;
+        margin-right: 20px;
+        position: relative;
+      }
+      
+      .ul-ecran-large li:last-child {
+        margin-right: 0;
+      }
+      
+      .ul-ecran-large li a {
+        text-decoration: none;
+        color: $text;
+        font-size: 18px;
+        padding: 10px 20px;
+        border: 1px solid transparent;
+        border-radius: 5px;
+        transition: border-color 0.3s, color 0.3s, background-color 0.3s;
+        position: relative;
+      }
+      
+      .ul-ecran-large li a::before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-color: transparent;
+        z-index: -1;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+      }
+      
+      .ul-ecran-large li a p {
+        margin: 0;
+      }
+
+      .ul-ecran-large li a p:hover {
+        color: $second-color-text;
+      }
+      
+      .ul-ecran-large li a p::after {
+        content: '';
+        display: block;
+        width: 0;
+        height: 2px;
+        background-color: $second-color-text;
+        transition: width 0.3s;
+      }
+      
+      .ul-ecran-large li a:hover p::after {
+        width: 100%;
+      }
+      
+
 }

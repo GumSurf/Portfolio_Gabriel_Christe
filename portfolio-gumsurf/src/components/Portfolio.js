@@ -5,13 +5,21 @@ import Kasa from '../assets/Kasa.webp';
 import SophieBluel from '../assets/SophieBluel.webp';
 import { Link } from 'react-router-dom';
 import PlanetePortfolio from '../assets/violette_planete.webp';
+import App from './Carousel'
 
 function Body() {
     return (
         <div id='Portfolio' className='portfolio'>
-            <img className='planete_portfolio rotate-self' src={PlanetePortfolio} alt="planete" />
-            <h2 className='title'>MES PROJETS</h2>
-            <div className='div-projets-img'>
+            <div className='background'>
+            <h2 className='second_title'>Voyage au Cœur de Mes Créations</h2>
+            <div className='div_text'>
+                <p className='text'>Bienvenue dans mon univers créatif. Ici, vous découvrirez une sélection de mes projets, chacun
+                    étant une étape clé de mon parcours professionnel et artistique. Explorez, inspirez-vous, et
+                    n'hésitez pas à me contacter pour toute collaboration ou question.</p>
+            </div>
+            </div>
+            <App />
+            {/*<div className='div-projets-img'>
                 <div className='Kasa, projet'>
                     <Link to="https://gumsurf.github.io/Kasa-Web-Site-React/">
                         <div className="image-container">
@@ -213,7 +221,7 @@ function Body() {
                         </div>
                     </div>
                 </div>
-            </div>
+    </div>*/}
         </div>
     )
 }

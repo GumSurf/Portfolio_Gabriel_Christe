@@ -1,13 +1,12 @@
-$portfolio-background: #051014ff;
-$portfolio-couleur-text: #016fb9ff;
-$portfolio-couleur-secondaire: #077187ff;
-$portfolio-couleur-tertiaire: #0470A0;
-$portfolio-orange-clair: #f45d01ff;
-$portfolio-orange: #f2bb05ff;
-$portfolio-orange-fonce: #d57500;
-$portfolio-bleu-clair: #00dddd;
-$portfolio-violet: #800080;
-
+$portfolio-background: #ffffff;
+$text: black;
+$second-color-text: #6E07F3;
+$button: #ffffff;
+$background-header: #aaaaaa;
+$portfolio-violet: #201057;
+$background-color: #6E07F3;
+$background-button-hover: #6E07F3;
+$header: white;
 
 @mixin smartphone {
     min-width: 375px;

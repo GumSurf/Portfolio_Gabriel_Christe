@@ -17,18 +17,54 @@
         padding-right: 0px;
     }
 
-    .title {
-        margin-top: 70px;
-        display: inline-block;
-        padding: 20px 60px 20px 60px;
-        border-radius: 20px;
-        font-size: 46px;
-        color: whitesmoke;
+    .background {
+        background-color: $background-color;
+        width: 100vw;
+        height: 50vh;
 
         @include phone {
-            font-size: 30px;
+            height: auto;
+        }
+
+    .second_title {
+        color: white;
+        font-size: 2rem;
+        text-align: center;
+        margin-top: 10vh;
+        margin-bottom: 5vh;
+
+        @include tablet {
+            font-size: 1.5rem;
+        }
+
+        @include phone {
+            font-size: 1.5rem;
+            margin-top: 5vh;
         }
     }
+
+    .div_text {
+        display: flex;
+        justify-content: center;
+
+        .text {
+            color: white;
+            margin-bottom: 5vh;
+            width: 50vw;
+            text-align: center;
+            font-size: 1.25rem;
+            line-height: 1.5;
+
+            @include tablet {
+                width: 90vw;
+            }
+
+            @include phone {
+                width: 90vw;
+            }
+        }
+    }
+}
 
     .div-projets-img {
         display: flex;
@@ -104,7 +140,7 @@
                         bottom: 0;
                         margin: 20px;
                         margin-bottom: 50px;
-                        color: whitesmoke;
+                        color: $text;
                     }
 
                     .div-projet-filtre {
@@ -112,7 +148,7 @@
                             position: absolute;
                             bottom: 0;
                             margin: 20px;
-                            color: whitesmoke;
+                            color: $text;
 
                             @include phone {
                                 font-size: xx-small;
@@ -128,9 +164,9 @@
                             width: 100%;
 
                             .cliquez-ici {
-                                background-color: #201057;
+                                background-color: #ffffff;
                                 padding: 20px;
-                                color: $portfolio-bleu-clair;
+                                color: $second-color-text;
                                 border-radius: 30px;
 
                                 @include phone {
@@ -161,7 +197,7 @@
                     .title-competences {
                         text-align: center;
                         margin-bottom: 20px;
-                        color: whitesmoke;
+                        color: $text;
                     }
 
                     .projet-ul {
@@ -203,7 +239,7 @@
                     }
 
                     .title-problemes {
-                        color: whitesmoke;
+                        color: $text;
                         margin-bottom: 20px;
                         text-align: center;
                     }

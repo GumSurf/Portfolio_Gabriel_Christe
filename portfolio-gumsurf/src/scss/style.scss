@@ -8,6 +8,7 @@
 @import 'components/About';
 @import 'components/Contact';
 @import 'components/NotFound';
+@import 'components/Carroussel';
 @import 'sections/header';
 @import 'sections/footer';
 
@@ -17,7 +18,7 @@
 }
 
 body {
-    background-color: #312068;
+    background-color: $portfolio-background;
 }
 
 p {
@@ -34,6 +35,18 @@ ul {
     list-style-type: none;
 }
 
+@mixin big-screen {
+    @media (min-width: 1441px) {
+        @content;
+    }
+}
+
+@mixin screen {
+    @media (min-width: 1025px) and (max-width: 1440px) {
+        @content;
+    }
+}
+
 // Mixin pour les media queries de tablette
 @mixin tablet {
     @media (min-width: 768px) and (max-width: 1024px) {
@@ -45,6 +58,18 @@ ul {
 @mixin phone {
     @media (max-width: 767px) {
         @content;
+    }
+}
+
+@include big-screen {
+    * {
+        font-size: large;
+    }
+}
+
+@include screen {
+    * {
+        font-size: medium;
     }
 }
 

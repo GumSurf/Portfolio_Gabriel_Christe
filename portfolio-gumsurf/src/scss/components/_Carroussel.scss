@@ -1,0 +1,422 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital@0;1&display=swap");
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+        transform: scale(1.3);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes next-slide-in {
+    from {
+        transform: translateX(100%);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes next-slide-out {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes back-slide-in {
+    from {
+        transform: translateX(-100%);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes back-slide-out {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(100%);
+    }
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+    &::before,
+    &::after {
+        content: "";
+    }
+}
+
+#app {
+    background: linear-gradient(to top left, #e66465, purple);
+    //background: linear-gradient(to top left,#ff8a00,#e52e71);
+    font-family: "Playfair Display", serif;
+}
+
+.wrapper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 50px 0px 70px 0px;
+    flex-direction: column;
+
+    @include phone {
+        padding: 0px;
+    }
+}
+
+.intro {
+    text-align: center;
+    font-size: 1.6rem;
+    margin-bottom: 50px;
+    //text-shadow: 0px 0px 10px purple;
+
+    h1 {
+        font-size: 5rem;
+        font-weight: lighter;
+    }
+
+    h1,
+    h2 {
+        font-style: italic;
+    }
+
+    h2 {
+        margin-bottom: 20px;
+    }
+
+    span {
+        text-decoration: underline;
+        color: #ff7a2a;
+    }
+
+    @media only screen and (max-width: 550px) {
+        h1 {
+            font-size: 4rem;
+        }
+
+        h2 {
+            font-size: 1.6rem;
+        }
+    }
+
+    @media only screen and (max-width: 450px) {
+        p {
+            font-size: 1.2rem;
+        }
+    }
+
+    @media only screen and (max-width: 415px) {
+        h1 {
+            font-size: 3rem;
+        }
+    }
+}
+
+.carousel {
+    display: flex;
+    position: relative;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+    width: 70vw;
+    margin-bottom: 50px;
+    box-shadow: 0px 5px 20px 0px #757575;
+    transition-duration: 0.5s;
+    transition-property: border-color;
+    border-radius: 12px;
+
+    @include tablet {
+        height: 50vh;
+        width: 90vw;
+    }
+
+    @include phone {
+        margin-top: 5vh;
+        width: 90vw;
+        height: 40vh;
+        border-left-style: none;
+        border-right-style: none;
+    }
+
+    .controls {
+        position: absolute;
+        z-index: 121;
+        height: 30px;
+        width: 30px;
+        background-color: $background-color;
+        border-radius: 50%;
+        cursor: pointer;
+        color: white;
+        font-size: 1.4rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        user-select: none;
+        transition-duration: 0.1s;
+        transition-timing-function: ease-in;
+
+        &--back {
+            left: 10px;
+
+            span {
+                position: relative;
+                border-left: 5px solid white;
+                border-top: 5px solid transparent;
+                border-right: 5px solid transparent;
+                border-bottom: 5px solid white;
+                border-bottom-left-radius: 1px;
+                transform: translate3d(-3px, 0px, 0) rotateZ(45deg);
+
+                &::before {
+                    position: absolute;
+                    border-top: 4px solid white;
+                    width: 12px;
+                    height: 15px;
+                    transform: rotateZ(-45deg) translate3d(8px, -3px, 0);
+                }
+            }
+        }
+
+        &--next {
+            right: 10px;
+
+            span {
+                position: relative;
+                border-left: 5px solid transparent;
+                border-top: 5px solid transparent;
+                border-right: 5px solid white;
+                border-bottom: 5px solid white;
+                border-bottom-right-radius: 1px;
+                transform: translate3d(4px, 0px, 0) rotateZ(-45deg);
+
+                &::before {
+                    position: absolute;
+                    border-top: 4px solid white;
+                    width: 12px;
+                    height: 15px;
+                    transform: rotateZ(45deg) translate3d(-17px, 5px, 0);
+                }
+            }
+        }
+
+        &:hover {
+            height: 33px;
+            width: 33px;
+        }
+    }
+
+    & .slide {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        width: 100%;
+        padding: 50px;
+        z-index: 0;
+
+        @include phone {
+            padding: 0;
+        }
+
+        &__copy-message {
+            position: absolute;
+            top: 10px;
+            font-size: 1.2rem;
+            transition-duration: 0.5s;
+
+            &.nope {
+                top: 0;
+                transform: translate3d(0, -100%, 0);
+            }
+        }
+
+        &__shape {
+            animation-name: fade-in;
+            animation-duration: 0.5s;
+            animation-fill-mode: forwards;
+            width: 100%;
+            position: relative;
+            object-fit: cover;
+        }
+    }
+
+    &--Kasa {
+        border-color: $second-color-text;
+        background-color: white;
+    }
+
+    &--MonVieuxGrimoire {
+        border-color: $second-color-text;
+        background-color: white;
+    }
+
+    &--NinaCarducci {
+        border-color: $second-color-text;
+        background-color: white;
+    }
+
+    &--SophieBluel {
+        border-color: $second-color-text;
+        background-color: white;
+    }
+
+    @media only screen and (max-width: 450px) {
+        height: 250px;
+    }
+}
+
+.code-wrapper {
+    background-color: $portfolio-violet;
+    box-shadow: 0px 5px 20px 0px #757575;
+    position: relative;
+    overflow: hidden;
+    width: 70vw;
+    display: flex;
+    flex-direction: column;
+    transition-property: border-color;
+    transition-duration: 0.5s;
+    color: white;
+    border-radius: 12px;
+
+    @include tablet {
+        width: 90vw;
+    }
+
+    @include phone {
+        width: 90vw;
+        border-left-style: none;
+        border-right-style: none;
+    }
+
+    .code {
+        font-family: monospace;
+        font-size: 1.2rem;
+        white-space: pre-wrap;
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+        width: 100%;
+
+
+        @media only screen and (max-width: 550px) {
+            padding: 45px;
+        }
+
+        @media only screen and (max-width: 450px) {
+            padding: 20px;
+        }
+
+        &--last {
+            position: absolute;
+
+            @include tablet {
+                font-size: 15px;
+            }
+
+            @include phone {
+                font-size: 1.2rem;
+            }
+
+            &.slide-left {
+                animation-name: back-slide-out;
+            }
+
+            &.slide-right {
+                animation-name: next-slide-out;
+            }
+        }
+
+        &--active {
+            position: relative;
+            color: $second-color-text;
+            font-size: 20px;
+            padding: 25px 0px 20px 60px;
+
+            @include tablet {
+                font-size: 15px;
+            }
+
+            @include phone {
+                font-size: 1.2rem;
+            }
+
+            &.slide-left {
+                animation-name: back-slide-in;
+            }
+
+            &.slide-right {
+                animation-name: next-slide-in;
+            }
+        }
+
+        &--secondary {
+            position: relative;
+            color: $text;
+            font-size: 16px;
+            padding: 0px 60px 20px 60px;
+
+            @include tablet {
+                font-size: 15px;
+            }
+
+            @include phone {
+                font-size: 1.2rem;
+            }
+
+            &.slide-left {
+                animation-name: back-slide-in;
+            }
+
+            &.slide-right {
+                animation-name: next-slide-in;
+            }
+        }
+
+        @media only screen and (max-width: 550px) {
+            padding: 45px;
+        }
+
+        @media only screen and (max-width: 450px) {
+            padding: 20px;
+        }
+    }
+
+    &--Kasa {
+        border-color: $second-color-text;
+        background-color: white;
+    }
+
+    &--MonVieuxGrimoire {
+        border-color: $second-color-text;
+        background-color: white;
+    }
+
+    &--NinaCarducci {
+        border-color: $second-color-text;
+        background-color: white;
+    }
+
+    &--SophieBluel {
+        border-color: $second-color-text;
+        background-color: white;
+    }
+}
