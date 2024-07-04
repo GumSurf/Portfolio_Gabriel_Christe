@@ -3,7 +3,7 @@ import NinaCarducci from '../assets/NinaCarducci.webp';
 import MonVieuxGrimoire from '../assets/MonVieuxGrimoire.webp';
 import Kasa from '../assets/Kasa.webp';
 import SophieBluel from '../assets/SophieBluel.webp';
-import { Link } from 'react-router-dom';
+import { a } from 'react-router-dom';
 import PlanetePortfolio from '../assets/violette_planete.webp';
 import App from './Carousel'
 
@@ -21,7 +21,7 @@ function Body() {
             <App />
             {/*<div className='div-projets-img'>
                 <div className='Kasa, projet'>
-                    <Link to="https://gumsurf.github.io/Kasa-Web-Site-React/">
+                    <a href="https://gumsurf.github.io/Kasa-Web-Site-React/">
                         <div className="image-container">
                             <img src={Kasa} alt="site web Kasa" />
                             <div className='overlay'>
@@ -34,7 +34,7 @@ function Body() {
                                 </div>
                             </div>
                         </div>
-                    </Link>
+                    </a>
                     <div className='div-competences-problemes'>
                         <div className='div-competences'>
                             <h2 className='title-competences'>Compétences apprises</h2>
@@ -72,11 +72,11 @@ function Body() {
                     </div>
                 </div>
                 <div className='NinaCarducci, projet'>
-                    <Link to="https://gumsurf.github.io/Portfolio-Nina-Carducci/">
+                    <a href="https://gumsurf.github.io/Portfolio-Nina-Carducci/">
                         <div className="image-container">
                             <img src={NinaCarducci} alt="site web Nina Carducci" />
                             <div className='overlay'>
-                                <Link to="https://gumsurf.github.io/Portfolio-Nina-Carducci/"><h2 className='projet-title'>Nina Carducci</h2></Link>
+                                <a href="https://gumsurf.github.io/Portfolio-Nina-Carducci/"><h2 className='projet-title'>Nina Carducci</h2></a>
                                 <div className='div-projet-filtre'>
                                     <p className='projet-filtre'>Débogage de site web || SEO, Accessibilité || Site web portfolio d'une photographe</p>
                                     <div className='div-cliquez-ici'>
@@ -85,7 +85,7 @@ function Body() {
                                 </div>
                             </div>
                         </div>
-                    </Link>
+                    </a>
                     <div className='div-competences-problemes'>
                         <div className='div-competences'>
                             <h2 className='title-competences'>Compétences apprises</h2>
@@ -123,11 +123,11 @@ function Body() {
                     </div>
                 </div>
                 <div className='SophieBluel, projet'>
-                <Link to="https://gumsurf.github.io/Portfolio-architecte-sophie-bluel/">
+                <a href="https://gumsurf.github.io/Portfolio-architecte-sophie-bluel/">
                     <div className="image-container">
                         <img src={SophieBluel} alt="site web Sophie Bluel" />
                         <div className='overlay'>
-                        <Link to="https://gumsurf.github.io/Portfolio-architecte-sophie-bluel/"><h2 className='projet-title'>Sophie Bluel</h2></Link>
+                        <a href="https://gumsurf.github.io/Portfolio-architecte-sophie-bluel/"><h2 className='projet-title'>Sophie Bluel</h2></a>
                             <div className='div-projet-filtre'>
                                 <p className='projet-filtre'>Site Html / Css || Site web portfolio d'une architecte d'intérieur</p>
                                 <div className='div-cliquez-ici'>
@@ -136,7 +136,7 @@ function Body() {
                             </div>
                         </div>
                     </div>
-                </Link>
+                </a>
                     <div className='div-competences-problemes'>
                         <div className='div-competences'>
                             <h2 className='title-competences'>Compétences apprises</h2>
@@ -174,11 +174,11 @@ function Body() {
                     </div>
                 </div>
                 <div className='Booki, projet'>
-                <Link to="https://gumsurf.github.io/P7-Dev-Web-livres/">
+                <a href="https://gumsurf.github.io/P7-Dev-Web-livres/">
                         <div className="image-container">
                             <img src={MonVieuxGrimoire} alt="site web Mon Vieux Grimoire" />
                             <div className='overlay'>
-                            <Link to="https://gumsurf.github.io/P7-Dev-Web-livres/"><h2 className='projet-title'>Mon Vieux Grimoire</h2></Link>
+                            <a href="https://gumsurf.github.io/P7-Dev-Web-livres/"><h2 className='projet-title'>Mon Vieux Grimoire</h2></a>
                                 <div className='div-projet-filtre'>
                                     <p className='projet-filtre'>Site Backend, Node.js, Express.js, MongoDb || Site web de notation de livres</p>
                                     <div className='div-cliquez-ici'>
@@ -187,7 +187,7 @@ function Body() {
                                 </div>
                             </div>
                         </div>
-                </Link>
+                </a>
                     <div className='div-competences-problemes'>
                         <div className='div-competences'>
                             <h2 className='title-competences'>Compétences apprises</h2>
