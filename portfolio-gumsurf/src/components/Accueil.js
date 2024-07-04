@@ -1,9 +1,5 @@
 import React from 'react';
-<<<<<<< HEAD
 import Photo from '../assets/moi_sans_background.png';
-=======
-import rosePlanete from '../assets/rose_planete.webp';
->>>>>>> c093d598010d5160f07929f5203b6577b9c53978
 import Typewriter from './TypeWriter';
 
 function Home() {
@@ -33,17 +29,10 @@ function Home() {
                     </div>
                     <div className='div-links'>
                         <div className='div-link'>
-<<<<<<< HEAD
                             <a className='link' href="#Contact">Contactez-moi</a>
                         </div>
                         <div className='div-link'>
                             <a className='link' href="#Portfolio">Voir les projets</a>
-=======
-                        <a className='link' href='#Contact'>Contactez-moi</a>
-                        </div>
-                        <div className='div-link'>
-                        <a className='link' href='#Portfolio'>Voir les projets</a>
->>>>>>> c093d598010d5160f07929f5203b6577b9c53978
                         </div>
                     </div>
                 </div>
