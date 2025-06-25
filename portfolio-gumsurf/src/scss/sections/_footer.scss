@@ -1,42 +1,92 @@
-.portfolio-footer {
+.footer {
     display: flex;
     flex-direction: column;
-    padding: 10px 100px 10px 100px;
+    padding: 10px 0px 10px 0px;
     background-color: $background-color;
-    align-items: center;
-    padding-top: 5vh;
 
-    @include phone {
-        padding: 10px 30px 10px 30px;
-    }
+    .container-footer {
+        width: 100%;
+        max-width: clamp(20rem, 80vw, 71.25rem); // Équivalent à 320px - 1140px
+        margin: 0 auto;
+        padding: 1rem;
+        padding-top: 5vh;
 
-    p {
-        text-align: center;
-        width: 30vw;
-        color: white;
-        margin-bottom: 2vh;
-
-        @include phone {
-            width: 90vw;
-            padding: 10px 30px 10px 30px;
-        }
-    }
-
-    .div-logo {
-        width: 100px;
-        height: auto;
-        padding: 10px;
-
-        .lien-img {
-            // Styles du lien contenant l'image
+        .portfolio-footer {
             display: flex;
-            justify-content: center;
+            flex-direction: row;
+            justify-content: space-between;
 
-            .header-logo {
-                // Styles du logo
-                height: 100%;
+            .text-footer {
+
+                .titre-footer {
+                    color: $button;
+                    text-transform: uppercase;
+                    letter-spacing: 1px;
+                    margin-bottom: 1.6rem;
+
+                }
+            }
+
+            .div-logo {
+                width: 100px;
+                height: auto;
+
+                .titre-social {
+                    color: #ffffff;
+                    text-transform: uppercase;
+                    letter-spacing: 1px;
+                }
+
+                .div-link-social {
+                    display: flex;
+
+                    .lien-img {
+                        display: flex;
+                        justify-content: center;
+                        margin-top: 1.6rem;
+
+                        .header-logo {
+                            height: 100%;
+                            width: 2rem;
+                            margin-right: 1rem;
+                            object-fit: cover;
+                        }
+                    }
+                }
+            }
+
+            p {
+                color: white;
+                margin-bottom: 2vh;
+            }
+        }
+
+        .div-copyright {
+            display: flex;
+            border-top: 1px solid #ffffff;
+            padding-top: 4vh;
+            margin: auto;
+            margin-bottom: 6vh;
+            margin-top: 6vh;
+            width: 92%;
+            gap: 10px;
+
+            @include tablet {
+                flex-direction: column;
+            }
+        
+            @include phone {
+                flex-direction: column;
+            }
+        
+            @include small-phone {
+                flex-direction: column;
+            }
+
+            .copyright {
+                color: #ffffff;
                 width: 100%;
-                object-fit: cover;
+                text-align: center;
             }
         }
     }

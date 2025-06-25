@@ -1,5 +1,5 @@
 $portfolio-background: #ffffff;
-$text: black;
+$text: #555;
 $second-color-text: #6E07F3;
 $button: #ffffff;
 $background-header: #aaaaaa;
@@ -8,9 +8,35 @@ $background-color: #6E07F3;
 $background-button-hover: #6E07F3;
 $header: white;
 
-@mixin smartphone {
-    min-width: 375px;
-    margin: 0px 20px 0px 20px;
+$font-size-sm: clamp(0.875rem, 1.5vw, 1rem);
+$font-size-base: clamp(1rem, 2vw, 1.125rem);
+$font-size-lg: clamp(1.25rem, 2.5vw, 1.5rem);
+$font-size-xl: clamp(1.5rem, 3vw, 2rem);
+$font-size-xxl: clamp(2rem, 4vw, 3rem);
+
+body {
+    font-size: $font-size-base;
+}
+
+h1 {
+    font-size: $font-size-xxl;
+}
+
+h2 {
+    font-size: $font-size-xl;
+}
+
+h3 {
+    font-size: $font-size-lg;
+}
+
+p,
+li {
+    font-size: $font-size-base;
+}
+
+small {
+    font-size: $font-size-sm;
 }
 
 /*#44355B

@@ -6,7 +6,7 @@ import Typewriter from "typewriter-effect";
 
 function TypeWriter() {
     return (
-        <div className="typewriter">
+        <div className="fadein typewriter">
             <Typewriter
 
                 onInit={(typewriter) => {

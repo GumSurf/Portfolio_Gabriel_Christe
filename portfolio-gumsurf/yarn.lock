@@ -1282,6 +1282,11 @@
   resolved "https://registry.npmjs.org/@csstools/selector-specificity/-/selector-specificity-2.2.0.tgz"
   integrity sha512-+OJ9konv95ClSTOJCmMZqpd5+YGsB2S+x6w3E1oaM8UuR5j8nTNHYSz8c9BEPGDOCMQYIEEGlVPj/VY64iTbGw==
 
+"@emailjs/browser@^4.4.1":
+  version "4.4.1"
+  resolved "https://registry.npmjs.org/@emailjs/browser/-/browser-4.4.1.tgz"
+  integrity sha512-DGSlP9sPvyFba3to2A50kDtZ+pXVp/0rhmqs2LmbMS3I5J8FSOgLwzY2Xb4qfKlOVHh29EAutLYwe5yuEZmEFg==
+
 "@eslint-community/eslint-utils@^4.2.0":
   version "4.4.0"
   resolved "https://registry.npmjs.org/@eslint-community/eslint-utils/-/eslint-utils-4.4.0.tgz"
@@ -5100,6 +5105,16 @@ graphemer@^1.4.0:
   resolved "https://registry.npmjs.org/graphemer/-/graphemer-1.4.0.tgz"
   integrity sha512-EtKwoO6kxCL9WO5xipiHTZlSzBm7WLT627TqC/uVRd0HKmq8NXyebnNYxDoBi7wt8eTWrUrKXCOVaFq9x1kgag==
 
+gsap-trial@^3.12.7:
+  version "3.12.7"
+  resolved "https://registry.npmjs.org/gsap-trial/-/gsap-trial-3.12.7.tgz"
+  integrity sha512-VR6064JQ4RM2pUll+qBB7mgNtTkKGBSPRSNRIibYU66ZA9fEFkUIWhAb37/h1oGVu1HxPYLqsxFUOaL7PQVJ1w==
+
+gsap@^3.12.7:
+  version "3.12.7"
+  resolved "https://registry.npmjs.org/gsap/-/gsap-3.12.7.tgz"
+  integrity sha512-V4GsyVamhmKefvcAKaoy0h6si0xX7ogwBoBSs2CTJwt7luW0oZzC0LhdkyuKV8PJAXr7Yaj8pMjCKD4GJ+eEMg==
+
 gzip-size@^6.0.0:
   version "6.0.0"
   resolved "https://registry.npmjs.org/gzip-size/-/gzip-size-6.0.0.tgz"
@@ -7807,7 +7822,7 @@ prompts@^2.0.1, prompts@^2.4.2:
     kleur "^3.0.3"
     sisteransi "^1.0.5"
 
-prop-types@^15.6.2, prop-types@^15.8.1:
+prop-types@^15.8.1:
   version "15.8.1"
   resolved "https://registry.npmjs.org/prop-types/-/prop-types-15.8.1.tgz"
   integrity sha512-oj87CgZICdulUohogVAR7AjlC0327U4el4L6eAvOqCeudMDVU0NThNaV+b9Df4dXgSP1gXMTnPdhfe/2qDH5cg==
@@ -7925,7 +7940,7 @@ react-dev-utils@^12.0.1:
     strip-ansi "^6.0.1"
     text-table "^0.2.0"
 
-"react-dom@^16.0.0 || ^17.0.0 || ^18.0.0", react-dom@^16.6.3, "react-dom@^17.x || ^18.x", react-dom@^18.0.0, react-dom@^18.2.0, react-dom@>=16.8:
+"react-dom@^16.0.0 || ^17.0.0 || ^18.0.0", "react-dom@^17.x || ^18.x", react-dom@^18.0.0, react-dom@^18.2.0, react-dom@>=16.8:
   version "18.2.0"
   resolved "https://registry.npmjs.org/react-dom/-/react-dom-18.2.0.tgz"
   integrity sha512-6IMTriUmvsjHUjNtEDudZfuDQUoWXVxKHhlEGSk81n4YFS+r/Kl99wXiwlVXtPBtJenozv2P+hxDsw9eA7Xo6g==
@@ -7937,13 +7952,6 @@ react-error-overlay@^6.0.11:
   version "6.0.11"
   resolved "https://registry.npmjs.org/react-error-overlay/-/react-error-overlay-6.0.11.tgz"
   integrity sha512-/6UZ2qgEyH2aqzYZgQPxEnz33NJ2gNsnHA2o5+o4wW9bLM/JYQitNP9xPhsXwC08hMMovfGe/8retsdDsczPRg==
-
-react-google-font-loader@^1.1.0:
-  version "1.1.0"
-  resolved "https://registry.npmjs.org/react-google-font-loader/-/react-google-font-loader-1.1.0.tgz"
-  integrity sha512-mnPYxBdhYEldTtREYPKllbmMvCGkTbpdmNjR6iTM3eTNWcg17OrfXjq9HRDZe+1+mhnUnI/AOcpvG0LIQPcLIw==
-  dependencies:
-    prop-types "^15.6.2"
 
 react-hook-form@^7.45.1:
   version "7.49.3"
@@ -8040,7 +8048,7 @@ react-scripts@^5.0.1:
   optionalDependencies:
     fsevents "^2.3.2"
 
-"react@^16.0.0 || ^17.0.0 || ^18.0.0", react@^16.6.3, "react@^16.8.0 || ^17 || ^18", "react@^17.x || ^18.x", react@^18.0.0, react@^18.2.0, "react@>= 16", react@>=16.8:
+"react@^16.0.0 || ^17.0.0 || ^18.0.0", "react@^16.8.0 || ^17 || ^18", "react@^17.x || ^18.x", react@^18.0.0, react@^18.2.0, "react@>= 16", react@>=16.8:
   version "18.2.0"
   resolved "https://registry.npmjs.org/react/-/react-18.2.0.tgz"
   integrity sha512-/3IjMdb2L9QbBdWiW5e3P2/npwMBaU9mHCSCUzNln0ZCYbcfTsGbTJrU/kGemdH2IWmB2ioZ+zkxtmq6g09fGQ==

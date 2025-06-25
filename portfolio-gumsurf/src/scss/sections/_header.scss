@@ -1,64 +1,28 @@
-// _header.scss
-
-// Mixin pour les media queries de tablette
-@mixin tablet {
-    @media (min-width: 768px) and (max-width: 1024px) {
-        @content;
-    }
-}
-
-@mixin phone {
-    @media (max-width: 767px) {
-        @content;
-    }
-}
-
 .portfolio-header {
-    display: flex;
-    justify-content: space-between;
-    height: 100px;
-    padding-left: 100px;
-    padding-right: 100px;
-    position: sticky;
-    top: 0;
-    z-index: 60;
-    opacity: 96%;
-    background-color: $header;
-    transition: background-color 0.3s;
+    padding-top: 20px;
 
-    @include tablet {
-        padding-left: 50px;
-        padding-right: 50px;
-    }
-
-    @include phone {
-        padding-left: 25px;
-        padding-right: 25px;
+    .nav-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.5rem 1rem;
+        width: 100%;
+        max-width: clamp(20rem, 80vw, 71.25rem); // Équivalent à 320px - 1140px
+        margin: 0 auto;
     }
 
     .div-logo {
-        width: 200px;
-        height: auto;
-        padding: 10px;
-
-        @include tablet {
-            margin-right: 30%;
-        }
-
-        @include phone {
-            margin-right: 10vh;
-        }
 
         .lien-img {
-            // Styles du lien contenant l'image
             display: flex;
             align-items: center;
             justify-content: center;
+            overflow: hidden;
 
             .header-logo {
-                // Styles du logo
-                height: 50%;
-                width: 50%;
+                background-color: $background-color;
+                border-radius: 300px;
+                width: 55px;
                 object-fit: cover;
                 transition: width 0.3s;
             }
@@ -68,24 +32,16 @@
     /* Sidenav menu */
     .sidenav {
         height: 100%;
-        width: 350px;
         position: fixed;
-        z-index: 1;
+        z-index: 999;
         top: 0;
-        right: -350px;
-        background-color: $background-header;
+        right: clamp(-100%, -300px, 0px);
+        /* Caché à droite */
+        width: clamp(200px, 30vw, 300px);
+        /* Largeur adaptable */
+        background-color: $background-color;
         padding-top: 60px;
         transition: right 0.5s ease;
-
-        @include tablet {
-            width: 250px;
-            background-color: $background-color;
-        }
-
-        @include phone {
-            width: 200px;
-            background-color: $background-color;
-        }
     }
 
     .sidenav ul {
@@ -98,7 +54,6 @@
     .sidenav a {
         padding: 8px 8px 8px 32px;
         text-decoration: none;
-        font-size: 25px;
         color: white;
         display: block;
         transition: 0.3s;
@@ -109,6 +64,7 @@
     .sidenav p {
         display: inline-block;
         vertical-align: middle;
+        font-weight: 800;
     }
 
     .planete {
@@ -129,22 +85,23 @@
         color: white;
     }
 
-    /* Active class */
     .sidenav.active {
         right: 0;
     }
 
-    /* Close btn */
     .sidenav .close {
         position: absolute;
         top: 0;
-        right: 25px;
-        font-size: 36px;
+        right: 10vw;
+        font-size: 60px;
+        font-weight: 300;
+        height: 40px;
+        padding: 0;
+        margin-top: 2rem;
     }
 
     .burger-icon {
         display: block;
-        margin-top: 35px;
     }
 
     .burger-icon span {
@@ -204,30 +161,29 @@
         margin: 0;
         display: flex;
         margin-top: 25px;
-      }
-      
-      .ul-ecran-large li {
+    }
+
+    .ul-ecran-large li {
         display: flex;
         margin-right: 20px;
         position: relative;
-      }
-      
-      .ul-ecran-large li:last-child {
+    }
+
+    .ul-ecran-large li:last-child {
         margin-right: 0;
-      }
-      
-      .ul-ecran-large li a {
+    }
+
+    .ul-ecran-large li a {
         text-decoration: none;
         color: $text;
-        font-size: 18px;
         padding: 10px 20px;
         border: 1px solid transparent;
         border-radius: 5px;
         transition: border-color 0.3s, color 0.3s, background-color 0.3s;
         position: relative;
-      }
-      
-      .ul-ecran-large li a::before {
+    }
+
+    .ul-ecran-large li a::before {
         content: '';
         position: absolute;
         width: 100%;
@@ -238,28 +194,30 @@
         z-index: -1;
         border-radius: 5px;
         transition: background-color 0.3s;
-      }
-      
-      .ul-ecran-large li a p {
-        margin: 0;
-      }
+    }
 
-      .ul-ecran-large li a p:hover {
+    .ul-ecran-large li a p {
+        margin: 0;
+        font-weight: 700;
+        color: #555;
+    }
+
+    .ul-ecran-large li a:hover p {
         color: $second-color-text;
-      }
-      
-      .ul-ecran-large li a p::after {
+    }
+
+    .ul-ecran-large li a p::after {
         content: '';
         display: block;
         width: 0;
         height: 2px;
         background-color: $second-color-text;
         transition: width 0.3s;
-      }
-      
-      .ul-ecran-large li a:hover p::after {
+    }
+
+    .ul-ecran-large li a:hover p::after {
         width: 100%;
-      }
-      
+    }
+
 
 }

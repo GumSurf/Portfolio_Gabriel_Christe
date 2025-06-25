@@ -1,286 +1,212 @@
 #About {
-    height: 100vh;
-
-.background_about {
-    margin-top: 10vh;
-    width: 100vw;
-    height: auto;
-
-    .background_purple {
-        background-color: $background-color;
-        height: 80vh;
-    }
-
-.second_title {
-    color: white;
-    font-size: 2rem;
-    text-align: center;
-    padding-top: 10vh;
-    margin-bottom: 5vh;
+    height: 140vh;
+    width: 100%;
+    max-width: clamp(20rem, 80vw, 71.25rem); // Équivalent à 320px - 1140px
+    margin: 0 auto;
+    padding: 1rem;
 
     @include tablet {
-        font-size: 1.5rem;
+        height: auto;
     }
 
     @include phone {
-        font-size: 1.5rem;
+        height: auto;
     }
-}
 
-.div_text {
-    display: flex;
-    justify-content: center;
+    @include small-phone {
+        height: auto;
+    }
 
-    .text {
-        color: white;
-        width: 50vw;
-        text-align: center;
-        font-size: 1.25rem;
-        line-height: 1.5;
+    .background_about {
+        margin-top: 15vh;
+        width: 100%;
+        height: auto;
 
-        @include tablet {
-            width: 90vw;
+        .background_purple {
+            height: 70vh;
+
+            @include tablet {
+                height: auto;
+            }
+        
+            @include phone {
+                height: auto;
+            }
+
+            @include small-phone {
+                height: auto;
+            }
         }
 
-        @include phone {
-            width: 90vw;
+        .second_title {
+            color: white;
+            text-align: center;
+            margin-bottom: 5vh;
+        }
+
+        .div_text {
+            display: flex;
+            justify-content: center;
             margin-bottom: 10vh;
+
+            .text {
+                color: white;
+                text-align: center;
+                line-height: 1.5;
+            }
         }
-    }
-}
 
-.About {
-    padding: 290px;
-    padding-top: 10vh;
-    position: relative;
-    display: flex;
-    justify-content: center;
+        .About {
+            position: relative;
+            opacity: 0;
 
-    @include tablet {
-        padding: 140px;
-    }
+            .Box {
+                display: flex;
+                box-shadow: 0px 5px 20px 0px #757575;
+                border-color: #bbbbbb;
+                border-style: solid;
+                border-width: 1px;
+                border-radius: 12px;
 
-    @include phone {
-        padding: 0;
-    }
+                @include tablet {
+                    flex-direction: column;
+                    box-shadow: none;
+                    border-style: none;
+                }
 
-    .Box {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        box-shadow: 0px 5px 20px 0px #757575;
-        border-color: #bbbbbb;
-        border-style: solid;
-        border-width: 1px;
-        border-radius: 12px;
+                @include phone {
+                    flex-direction: column;
+                    box-shadow: none;
+                    border-style: none;
+                    padding: 0;
+                }
 
-        @include tablet {
-            flex-direction: column;
-            box-shadow: none;
-            border-style: none;
-        }
+                @include small-phone {
+                    flex-direction: column;
+                    box-shadow: none;
+                    border-style: none;
+                    padding: 0;
+                }
+
+                .competences {
+                    background-color: white;
+                    color: $text;
+                    display: flex;
+                    flex-direction: column;
+                    height: auto;
+                    width: 35vw;
+                    padding-top: 20px;
+                    padding-bottom: 20px;
+                    align-items: center;
+
+                    @include tablet {
+                        width: auto;
+                        border: 2px solid $second-color-text;
+                        border-bottom: 0px;
+                    }
     
-        @include phone {
-            flex-direction: column;
-            box-shadow: none;
-            border-style: none;
-            padding: 0;
-        }
+                    @include phone {
+                        width: auto;
+                        border: 2px solid $second-color-text;
+                        border-bottom: 0px;
+                    }
 
-    .competences_frontend {
-        background-color: white;
-        color: $text;
-        display: flex;
-        flex-direction: column;
-        height: 70vh;
-        width: 35vw;
-        padding-top: 20px;
-        border-top-left-radius: 12px;
-        border-bottom-left-radius: 12px;
+                    @include small-phone {
+                        width: auto;
+                        border: 2px solid $second-color-text;
+                        border-bottom: 0px;
+                    }
 
-        @include tablet {
-            height: auto;
-            border: 2px solid $second-color-text;
-            border-radius: 10px;
-            border-bottom: 0px;
-            padding-bottom: 5vh;
-            box-shadow: 0px 15px 30px 0px #151515;
-            border-bottom-right-radius: 0px;
-            border-bottom-left-radius: 0px;
-            width: 90vw;
-        }
+                    * {
+                        text-align: center;
+                    }
 
-        @include phone {
-            height: auto;
-            border: 2px solid $second-color-text;
-            border-radius: 10px;
-            border-bottom: 0px;
-            padding-bottom: 5vh;
-            box-shadow: 0px 15px 30px 0px #151515;
-            border-bottom-right-radius: 0px;
-            border-bottom-left-radius: 0px;
-            width: 90vw;
-        }
+                    h2:nth-child(1) {
+                        margin: 30px;
+                        margin-bottom: 0px;
+                        background: linear-gradient(45deg, $background-color, #556270);
+                        -webkit-background-clip: text;
+                        -webkit-text-fill-color: transparent;
+                    }
 
-        * {
-            text-align: center;
-        }
+                    .competences_text {
+                        width: 75%;
+                    }
 
-        :nth-child(1) {
-            margin: 20px;
-        }
+                    p {
+                        color: #555;
+                        margin-top: 10px;
+                    }
 
-        :nth-child(2) {
-            margin: 20px;
-        }
+                    h3 {
+                        margin-top: 40px;
+                        color: $second-color-text;
+                        font-weight: 600;
+                    }
 
-        :nth-child(3) {
-            margin: 10px;
-        }
+                    li {
+                        margin: 20px;
+                    }
+                }
 
-        :nth-child(4) {
-            margin: 20px;
-        }
+                .onde-icon {
+                    display: block;
+                    margin-top: 35px;
+                }
 
-        h2:nth-child(1) {
-            margin: 30px;
-            color: $text;
-            font-size: 2rem;
-        }
+                .onde-icon span {
+                    display: block;
+                    width: 35px;
+                    height: 5px;
+                    background-color: #00cccc;
+                    margin: 6px 0;
+                }
+            }
+            .competences_frontend {
+                border-top-left-radius: 12px;
+                border-bottom-left-radius: 12px;
 
-        p:nth-child(3) {
-            margin: 20px;
-            margin-bottom: 0px;
-            color: $second-color-text;
-            font-size: 20px;
-        }
+                @include tablet {
+                    border-bottom-right-radius: 0px;
+                    border-bottom-left-radius: 0px;
+                    border-top-right-radius: 12px;
+                }
 
-        p:nth-child(4) {
-            margin-top: 10px;
-        }
+                @include phone {
+                    border-bottom-right-radius: 0px;
+                    border-bottom-left-radius: 0px;
+                    border-top-right-radius: 12px;
+                }
 
-        p:nth-child(5) {
-            margin: 20px;
-            margin-bottom: 0px;
-            color: $second-color-text;
-            font-size: 20px;
-        }
+                @include small-phone {
+                    border-bottom-right-radius: 0px;
+                    border-bottom-left-radius: 0px;
+                    border-top-right-radius: 12px;
+                }
+            }
 
-        p:nth-child(6) {
-            margin-top: 10px;
-        }
+            .competences_backend {
+                border-top-right-radius: 12px;
+                border-bottom-right-radius: 12px;
 
-        li {
-            margin: 20px;
-        }
-    }
+                @include tablet {
+                    border-bottom-right-radius: 12px;
+                    border-bottom-left-radius: 12px;
+                    border-top-right-radius: 0px;
+                }
 
-    .competences_backend {
-        background-color: white;
-        color: $text;
-        display: flex;
-        flex-direction: column;
-        border-left: 1px solid #bbbbbb;
-        height: 70vh;
-        width: 35vw;
-        padding-top: 20px;
-        border-top-right-radius: 12px;
-        border-bottom-right-radius: 12px;
+                @include phone {
+                    border-bottom-right-radius: 12px;
+                    border-bottom-left-radius: 12px;
+                    border-top-right-radius: 0px;
+                }
 
-        @include tablet {
-            border: 2px solid $background-color;
-            border-radius: 10px;
-            border-top: 0px;
-            height: auto;
-            padding-bottom: 5vh;
-            box-shadow: 0px 15px 30px 0px #151515;
-            border-top-right-radius: 0px;
-            border-top-left-radius: 0px;
-            width: 90vw;
-        }
-
-        @include phone {
-            border: 2px solid $background-color;
-            border-radius: 10px;
-            border-top: 0px;
-            height: auto;
-            padding-bottom: 5vh;
-            box-shadow: 0px 15px 30px 0px #151515;
-            border-top-right-radius: 0px;
-            border-top-left-radius: 0px;
-            width: 90vw;
-        }
-
-        * {
-            text-align: center;
-        }
-
-        :nth-child(1) {
-            margin: 30px;
-        }
-
-        :nth-child(2) {
-            margin: 20px;
-        }
-
-        :nth-child(3) {
-            margin: 10px;
-        }
-
-        :nth-child(4) {
-            margin: 20px;
-        }
-
-        h2:nth-child(1) {
-            margin: 30px;
-            color: $text;
-            font-size: 2rem;
-        }
-
-        p:nth-child(3) {
-            margin: 20px;
-            margin-bottom: 0px;
-            color: $second-color-text;
-            font-size: 20px;
-        }
-
-        p:nth-child(4) {
-            margin-top: 10px;
-        }
-
-        p:nth-child(5) {
-            margin: 20px;
-            margin-bottom: 0px;
-            color: $second-color-text;
-            font-size: 20px;
-        }
-
-        p:nth-child(6) {
-            margin-top: 10px;
-        }
-
-        li:nth-child(1) {
-            margin: 20px;
-        }
-
-        li {
-            margin: 20px;
+                @include small-phone {
+                    border-bottom-right-radius: 12px;
+                    border-bottom-left-radius: 12px;
+                    border-top-right-radius: 0px;
+                }
+            }
         }
     }
-
-    .onde-icon {
-        display: block;
-        margin-top: 35px;
-    }
-
-    .onde-icon span {
-        display: block;
-        width: 35px;
-        height: 5px;
-        background-color: #00cccc;
-        margin: 6px 0;
-    }
-}
-}
-}
 }

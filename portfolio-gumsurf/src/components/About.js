@@ -13,35 +13,57 @@ function Home() {
                     </div>
                     <div className='About'>
                         <div className="Box">
-                            <div className='competences_frontend'>
+                            <div className="competences competences_frontend">
                                 <h2>Développeur Frontend</h2>
-                                <p>Je suis passionné par le frontend pour sa créativité et son impact visuel immédiat.</p>
-                                <p>Technologies:</p>
-                                <p>Html, Css, JavaScript, React, Sass, Typescript, Git</p>
-                                <p>Outils Dev:</p>
+                                <p className='competences_text'>Je suis passionné par le frontend pour sa créativité et son impact visuel immédiat.</p>
+
+                                <h3>Technologies :</h3>
+                                <p>HTML, CSS, Sass, JavaScript, TypeScript, <br /> React, TailwindCSS, Git</p>
+
+                                <h3>Outils :</h3>
                                 <ul>
+                                    <li>Visual Studio Code</li>
+                                    <li>GitHub</li>
+                                    <li>Figma</li>
                                     <li>Lighthouse</li>
                                     <li>Wave</li>
-                                    <li>Figma</li>
-                                    <li>Github</li>
-                                    <li>Visual Studio Code</li>
-                                    <li>tailwindCSS</li>
+                                </ul>
+
+                                <h3>Build & Tests :</h3>
+                                <ul>
+                                    <li>Webpack</li>
+                                    <li>Jest</li>
                                 </ul>
                             </div>
-                            <div className='competences_backend'>
+
+                            <div className="competences competences_backend">
                                 <h2>Développeur Backend</h2>
-                                <p>Je suis passionné par le backend pour sa complexité et sa capacité à construire des architectures solides.</p>
-                                <p>Technologies:</p>
-                                <p>JavaScript, Node.js, Express.js, Typescript, Nest.js, Git</p>
-                                <p>Outils Dev:</p>
+                                <p className='competences_text'>Je suis passionné par le backend pour sa complexité et sa capacité à construire des architectures solides.</p>
+
+                                <h3>Technologies :</h3>
+                                <p>JavaScript, TypeScript, Node.js, <br /> Express.js, Nest.js, Git</p>
+
+                                <h3>Bases de données :</h3>
                                 <ul>
                                     <li>MongoDB</li>
-                                    <li>Github</li>
                                     <li>MySQL</li>
+                                </ul>
+
+                                <h3>Outils & DevOps :</h3>
+                                <ul>
                                     <li>Docker</li>
+                                    <li>GitHub</li>
                                     <li>Visual Studio Code</li>
+                                    <li>Swagger / Postman</li>
+                                </ul>
+
+                                <h3>Sécurité & Authentification :</h3>
+                                <ul>
+                                    <li>JWT (JSON Web Token)</li>
+                                    <li>OAuth2</li>
                                 </ul>
                             </div>
+
                         </div>
                     </div>
                 </div>

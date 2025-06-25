@@ -1,70 +1,40 @@
 .portfolio {
     height: 100%;
-    padding-left: 100px;
-    padding-right: 100px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    width: 100%;
+    max-width: clamp(20rem, 80vw, 71.25rem); // Équivalent à 320px - 1140px
+    margin: 0 auto;
+    padding: 1rem;
 
-    @include tablet {
-        padding-left: 0px;
-        padding-right: 0px;
-    }
+    .background_portfolio {
+        width: 100%;
 
-    @include phone {
-        padding-left: 0px;
-        padding-right: 0px;
-    }
-
-    .background {
-        background-color: $background-color;
-        width: 100vw;
-        height: 50vh;
-
-        @include phone {
-            height: auto;
-        }
-
-    .second_title {
-        color: white;
-        font-size: 2rem;
-        text-align: center;
-        margin-top: 10vh;
-        margin-bottom: 5vh;
-
-        @include tablet {
-            font-size: 1.5rem;
-        }
-
-        @include phone {
-            font-size: 1.5rem;
-            margin-top: 5vh;
-        }
-    }
-
-    .div_text {
-        display: flex;
-        justify-content: center;
-
-        .text {
+        .second_title {
             color: white;
-            margin-bottom: 5vh;
-            width: 50vw;
             text-align: center;
-            font-size: 1.25rem;
-            line-height: 1.5;
+            margin-bottom: 5vh;
+        }
 
-            @include tablet {
-                width: 90vw;
-            }
+        .div_text {
+            display: flex;
+            justify-content: center;
 
-            @include phone {
-                width: 90vw;
+            .text {
+                color: white;
+                text-align: center;
+                line-height: 1.5;
+
+                @include big-screen {
+                    margin-bottom: 20vh;
+                }
+
+                @include screen {
+                    margin-bottom: 20vh;
+                }
             }
         }
     }
-}
 
     .div-projets-img {
         display: flex;
@@ -77,34 +47,12 @@
         margin-top: 70px;
         margin-bottom: 150px;
 
-        @include tablet {
-            margin-top: 0px;
-            padding: 0px;
-        }
-
-        @include phone {
-            margin-top: 0px;
-            padding: 0px;
-            margin-bottom: 75px;
-        }
-
         .projet {
             width: 100vh;
             height: auto;
             margin-bottom: 100px;
             padding: 50px;
             border-radius: 10px;
-
-            @include tablet {
-                width: auto;
-            }
-
-            @include phone {
-                width: 80vw;
-                margin-bottom: 0px;
-                padding: 0;
-                padding-bottom: 50px;
-            }
 
             .image-container {
                 position: relative;
@@ -127,14 +75,6 @@
                     border-top-left-radius: 5px;
                     background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7));
 
-                    @include tablet {
-                        height: 99%;
-                    }
-
-                    @include phone {
-                        height: 99%;
-                    }
-
                     .projet-title {
                         position: absolute;
                         bottom: 0;
@@ -149,10 +89,6 @@
                             bottom: 0;
                             margin: 20px;
                             color: $text;
-
-                            @include phone {
-                                font-size: xx-small;
-                            }
                         }
 
                         .div-cliquez-ici {
@@ -168,11 +104,6 @@
                                 padding: 20px;
                                 color: $second-color-text;
                                 border-radius: 30px;
-
-                                @include phone {
-                                    padding: 10px;
-                                    font-size: xx-small;
-                                }
                             }
                         }
                     }
@@ -190,10 +121,6 @@
                     border-bottom-left-radius: 5px;
                     border-right: 1px solid #00cccc;
 
-                    @include tablet {
-                        width: 45vw;
-                    }
-
                     .title-competences {
                         text-align: center;
                         margin-bottom: 20px;
@@ -206,19 +133,10 @@
                         flex-direction: column;
                         align-items: center;
 
-                        @include phone {
-                            flex-wrap: wrap;
-                            justify-content: center;
-                        }
-
                         .projet-li {
                             padding-right: 20px;
                             transition: transform 0.3s ease-in-out;
                             padding-bottom: 20px;
-
-                            @include phone {
-                                padding-right: 10px;
-                            }
 
                             .projet-attribut {
                                 color: #00cccc;
@@ -233,10 +151,6 @@
                     padding: 30px 0 30px 0;
                     width: 40vw;
                     border-bottom-right-radius: 5px;
-
-                    @include tablet {
-                        width: 45vw;
-                    }
 
                     .title-problemes {
                         color: $text;
@@ -259,10 +173,6 @@
                                 .problemes {
                                     color: #00cccc;
                                     text-align: center;
-
-                                    @include phone {
-                                        font-size: xx-small;
-                                    }
                                 }
                             }
                         }

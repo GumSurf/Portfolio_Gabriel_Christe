@@ -31,7 +31,7 @@ const SHAPES = [
 
 const TEXT_SHAPES = [
     [
-        "MonVieuxGrimoire",
+        "Mon Vieux Grimoire",
         "Description :",
         "J'ai développé le backend du site web  \"Mon Vieux Grimoire\" en utilisant Node.js et Express.js, connecté à une base de données MongoDB. Ce projet avait déjà un frontend existant. Le site permet aux utilisateurs de noter différents livres, générant ainsi une note moyenne pour chaque livre. Les fonctionnalités incluent la création de comptes, l'ajout de livres, la modification de posts, et la possibilité de noter les livres des autres utilisateurs.",
         "Actions réalisées :",
@@ -59,7 +59,7 @@ const TEXT_SHAPES = [
         "Commentaires et évaluations : Les utilisateurs peuvent laisser des avis et des notes sur les biens loués, améliorant ainsi la transparence et la confiance entre les parties."
     ],
     [
-        "NinaCarducci",
+        "Nina Carducci",
         "Description :",
         "J'ai travaillé sur l'optimisation du site web de Nina Carducci pour résoudre des problèmes de ralentissement lors du chargement de la page. En plus de l'optimisation de la vitesse, j'ai ajouté des améliorations en termes d'accessibilité et de SEO pour rendre le site plus fluide et agréable à utiliser.",
         "Actions réalisées :",
@@ -73,7 +73,7 @@ const TEXT_SHAPES = [
         
     ],
     [
-        "SophieBluel",
+        "Sophie Bluel",
         "Description :",
         "J'ai été responsable de développer le frontend du site web de Sophie Bluel, une décoratrice d'intérieur. Le backend était déjà en place, donc j'ai utilisé HTML, CSS et JavaScript pour créer une interface utilisateur interactive. Mon travail principal incluait la connexion à une API existante pour afficher les photos de Sophie Bluel et leur assigner des catégories spécifiques.",
         "Actions réalisées :",

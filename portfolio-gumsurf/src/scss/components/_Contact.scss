@@ -2,37 +2,25 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 100%;
+    width: 100%;
+    max-width: clamp(20rem, 80vw, 71.25rem); // Équivalent à 320px - 1140px
+    margin: 0 auto;
+    padding: 1rem;
     margin-top: 20vh;
 
-    @include tablet {
-        margin-top: 120vh;
-    }
-
-    @include phone {
-        margin-top: 80vh;
-        flex-direction: column-reverse;
+    .cover {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
     }
 
     .background_contact {
-        background-color: $background-color;
-        width: 100vw;
-        height: 40vh;
 
         .second_title_contact {
             color: white;
-            font-size: 2rem;
             text-align: center;
-            padding-top: 10vh;
             margin-bottom: 5vh;
-
-            @include tablet {
-                font-size: 1.5rem;
-            }
-
-            @include phone {
-                font-size: 1.5rem;
-            }
         }
 
         .div_text_contact {
@@ -41,19 +29,8 @@
 
             .text_contact {
                 color: white;
-                margin-bottom: 5vh;
-                width: 30vw;
                 text-align: center;
-                font-size: 1.25rem;
                 line-height: 1.5;
-
-                @include tablet {
-                    width: 90vw;
-                }
-
-                @include phone {
-                    width: 90vw;
-                }
             }
         }
     }
@@ -62,19 +39,9 @@
         display: flex;
         flex-direction: row;
         justify-content: space-around;
-        width: 100vw;
+        width: 100%;
         margin-top: 10vh;
         margin-bottom: 30vh;
-
-        @include tablet {
-            flex-direction: column;
-            align-items: center;
-        }
-
-        @include phone {
-            flex-direction: column;
-            align-items: center;
-        }
     }
 
     .list_contact>div {
@@ -82,23 +49,10 @@
         align-items: center;
         justify-content: center;
         text-align: center;
-
-        @include tablet {
-            margin-top: 5vh;
-        }
-
-        @include phone {
-            margin-top: 5vh;
-        }
     }
 
     .list_contact>div>a {
-        font-size: 16px;
         text-align: center;
-
-        @include phone {
-            font-size: 1.25rem;
-        }
     }
 
     .list_contact>div>img {
@@ -111,17 +65,6 @@
         border: 2px solid $background-color;
         border-radius: 999px;
         background-color: white;
-
-        @include tablet {
-            width: 70vw;
-            margin-top: 0vh !important;
-        }
-
-        @include phone {
-            width: 70vw;
-            margin-top: 0vh !important;
-            padding: 10px;
-        }
     }
 
     .div_telephone {
@@ -129,15 +72,6 @@
         border: 2px solid $background-color;
         border-radius: 999px;
         background-color: white;
-
-        @include tablet {
-            width: 70vw;
-        }
-
-        @include phone {
-            width: 70vw;
-            padding: 10px;
-        }
     }
 
     .div_linkedin {
@@ -145,14 +79,5 @@
         border: 2px solid $background-color;
         border-radius: 999px;
         background-color: white;
-
-        @include tablet {
-            width: 70vw;
-        }
-
-        @include phone {
-            width: 70vw;
-            padding: 10px;
-        }
     }
 }
