@@ -12,7 +12,7 @@ function App() {
         <div>
             <Header />
             <Routes>
-                <Route path="/Portfolio_Gabriel_Christe/" element={<MainPage />} />
+                <Route path="/" element={<MainPage />} />
                 <Route path="/mentions-legales" element={<MentionsLegales />} />
                 <Route path="/politique-confidentialite" element={<PolitiqueConfidentialite />} />
             </Routes>
