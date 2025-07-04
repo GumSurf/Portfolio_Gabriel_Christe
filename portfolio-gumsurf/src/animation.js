@@ -106,7 +106,7 @@ const buttonHoverAnimation = () => {
                 end: () => "+=" + (document.querySelector(".img-carousel").scrollWidth - window.innerWidth),
                 scrub: 1.5,
                 invalidateOnRefresh: true,
-                markers: true,
+                markers: false,
             }
         });
     });
@@ -127,7 +127,7 @@ const scrollAnimation = () => {
         ScrollTrigger.create({
 
             trigger: triggerClass,
-            markers: true,
+            markers: false,
             start: "top 50%",
             end: "bottom 20%",
 
@@ -158,7 +158,7 @@ const scrollAnimation = () => {
     ScrollTrigger.create({
 
         trigger: ".background_portfolio",
-        markers: true,
+        markers: false,
         start: "top 50%",
         end: "bottom 20%",
 
@@ -182,7 +182,7 @@ const scrollAnimation = () => {
     ScrollTrigger.create({
 
         trigger: '.background_contact',
-        markers: true,
+        markers: false,
         start: "top 50%",
         end: "bottom 20%",
 
@@ -198,7 +198,7 @@ const scrollAnimation = () => {
     ScrollTrigger.create({
 
         trigger: '.About',
-        markers: true,
+        markers: false,
         start: "top 50%",
         end: "bottom 20%",
 
@@ -222,7 +222,7 @@ const scrollAnimation = () => {
     ScrollTrigger.create({
 
         trigger: '.contact_form',
-        markers: true,
+        markers: false,
         start: "top 50%",
         end: "bottom 20%",
 
