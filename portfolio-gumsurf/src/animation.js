@@ -121,127 +121,119 @@ const buttonHoverAnimation = () => {
 const scrollAnimation = () => {
     gsap.registerPlugin(ScrollTrigger);
 
+    // Vérifie la présence des triggers avant de créer les ScrollTrigger
     const triggers = ['.background_purple'];
 
     triggers.forEach(triggerClass => {
-        ScrollTrigger.create({
+        if (document.querySelector(triggerClass)) {
+            ScrollTrigger.create({
+                trigger: triggerClass,
+                markers: false,
+                start: "top 50%",
+                end: "bottom 20%",
+                onEnter: () => {
+                    gsap.to('body', { duration: 1, backgroundColor: '#6E07F3' })
+                    gsap.to('.second_title_contact', { duration: 1, color: '#6E07F3' })
+                    gsap.to('.text_contact', { duration: 1, color: '#6E07F3' })
+                },
+                onEnterBack: () => {
+                    gsap.to('.second_title_contact', { duration: 1, color: '#6E07F3' })
+                    gsap.to('.text_contact', { duration: 1, color: '#6E07F3' })
+                },
+                onLeaveBack: () => {
+                    gsap.to('body', { duration: 1, backgroundColor: '#ffffff' })
+                    gsap.to('.second_title_contact', { duration: 1, color: '#ffffff' })
+                    gsap.to('.text_contact', { duration: 1, color: '#ffffff' })
+                },
+                onLeave: () => {
+                    gsap.to('.second_title_contact', { duration: 1, color: '#ffffff' })
+                    gsap.to('.text_contact', { duration: 1, color: '#ffffff' })
+                },
+            });
+        }
+    });
 
-            trigger: triggerClass,
+    if (document.querySelector('.background_portfolio')) {
+        ScrollTrigger.create({
+            trigger: ".background_portfolio",
             markers: false,
             start: "top 50%",
             end: "bottom 20%",
-
             onEnter: () => {
                 gsap.to('body', { duration: 1, backgroundColor: '#6E07F3' })
-                gsap.to('.second_title_contact', { duration: 1, color: '#6E07F3' })
-                gsap.to('.text_contact', { duration: 1, color: '#6E07F3' })
+            },
+            onEnterBack: () => {
+                gsap.to('body', { duration: 1, backgroundColor: '#6E07F3' })
+            },
+            onLeaveBack: () => {
+                gsap.to('body', { duration: 1, backgroundColor: '#ffffff' })
+            },
+            onLeave: () => {
+                gsap.to('body', { duration: 1, backgroundColor: '#ffffff' })
+            },
+        });
+    }
+
+    if (document.querySelector('.background_contact')) {
+        ScrollTrigger.create({
+            trigger: '.background_contact',
+            markers: false,
+            start: "top 50%",
+            end: "bottom 20%",
+            onEnter: () => {
+                gsap.to('body', { duration: 1, backgroundColor: '#6E07F3' })
             },
 
             onEnterBack: () => {
-                gsap.to('.second_title_contact', { duration: 1, color: '#6E07F3' })
-                gsap.to('.text_contact', { duration: 1, color: '#6E07F3' })
+                gsap.to('body', { duration: 1, backgroundColor: '#6E07F3' })
             },
-
-            onLeaveBack: () => {
-                gsap.to('body', { duration: 1, backgroundColor: '#ffffff' })
-                gsap.to('.second_title_contact', { duration: 1, color: '#ffffff' })
-                gsap.to('.text_contact', { duration: 1, color: '#ffffff' })
-            },
-
             onLeave: () => {
-                gsap.to('.second_title_contact', { duration: 1, color: '#ffffff' })
-                gsap.to('.text_contact', { duration: 1, color: '#ffffff' })
+                gsap.to('body', { duration: 1, backgroundColor: '#ffffff' });
             },
         });
-    });
+    }
 
-    ScrollTrigger.create({
+    if (document.querySelector('.About')) {
+        ScrollTrigger.create({
+            trigger: '.About',
+            markers: false,
+            start: "top 50%",
+            end: "bottom 20%",
+            onEnter: () => {
+                gsap.to(".About", { opacity: 1, y: -50 });
+            },
+            onEnterBack: () => {
+                gsap.to(".About", { opacity: 1, y: -50 });
+            },
+            onLeaveBack: () => {
+                gsap.to(".About", { opacity: 0, y: 50 });
+            },
+            onLeave: () => {
+                gsap.to(".About", { opacity: 0, y: 50 });
+            },
+        });
+    }
 
-        trigger: ".background_portfolio",
-        markers: false,
-        start: "top 50%",
-        end: "bottom 20%",
-
-        onEnter: () => {
-            gsap.to('body', { duration: 1, backgroundColor: '#6E07F3' })
-        },
-
-        onEnterBack: () => {
-            gsap.to('body', { duration: 1, backgroundColor: '#6E07F3' })
-        },
-
-        onLeaveBack: () => {
-            gsap.to('body', { duration: 1, backgroundColor: '#ffffff' })
-        },
-
-        onLeave: () => {
-            gsap.to('body', { duration: 1, backgroundColor: '#ffffff' })
-        },
-    });
-
-    ScrollTrigger.create({
-
-        trigger: '.background_contact',
-        markers: false,
-        start: "top 50%",
-        end: "bottom 20%",
-
-        onEnterBack: () => {
-            gsap.to('body', { duration: 1, backgroundColor: '#6E07F3' })
-        },
-
-        onLeave: () => {
-            gsap.to('body', { duration: 1, backgroundColor: '#ffffff' });
-        },
-    });
-
-    ScrollTrigger.create({
-
-        trigger: '.About',
-        markers: false,
-        start: "top 50%",
-        end: "bottom 20%",
-
-        onEnter: () => {
-            gsap.to(".About", { opacity: 1, y: -50 });
-        },
-
-        onEnterBack: () => {
-            gsap.to(".About", { opacity: 1, y: -50 });
-        },
-
-        onLeaveBack: () => {
-            gsap.to(".About", { opacity: 0, y: 50 });
-        },
-
-        onLeave: () => {
-            gsap.to(".About", { opacity: 0, y: 50 });
-        },
-    });
-
-    ScrollTrigger.create({
-
-        trigger: '.contact_form',
-        markers: false,
-        start: "top 50%",
-        end: "bottom 20%",
-
-        onEnter: () => {
-            gsap.to(".contact_form", { opacity: 1, y: -50 });
-        },
-
-        onEnterBack: () => {
-            gsap.to(".contact_form", { opacity: 1, y: -50 });
-        },
-
-        onLeaveBack: () => {
-            gsap.to(".contact_form", { opacity: 0, y: 50 });
-        },
-
-        onLeave: () => {
-            gsap.to(".contact_form", { opacity: 0, y: 50 });
-        },
-    });
+    if (document.querySelector('.contact_form')) {
+        ScrollTrigger.create({
+            trigger: '.contact_form',
+            markers: false,
+            start: "top 50%",
+            end: "bottom 20%",
+            onEnter: () => {
+                gsap.to(".contact_form", { opacity: 1, y: -50 });
+            },
+            onEnterBack: () => {
+                gsap.to(".contact_form", { opacity: 1, y: -50 });
+            },
+            onLeaveBack: () => {
+                gsap.to(".contact_form", { opacity: 0, y: 50 });
+            },
+            onLeave: () => {
+                gsap.to(".contact_form", { opacity: 0, y: 50 });
+            },
+        });
+    }
 
     ScrollTrigger.refresh();
 }

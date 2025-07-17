@@ -39,7 +39,7 @@ function Header() {
         <header id="myHeader" className="portfolio-header">
             <nav className='nav-header'>
                 <div className='div-logo'>
-                    <Link className='lien-img' to='/Portfolio_GumSurf/'><img id='logo' className="header-logo" src={Photo} alt="Logo Portfolio" /></Link>
+                    <Link className='lien-img' to='/'><img id='logo' className="header-logo" src={Photo} alt="Logo Portfolio" /></Link>
                 </div>
                 <div>
                     {windowWidth < 1024 ? (
@@ -50,22 +50,22 @@ function Header() {
                                 <br></br>
                                 <ul>
                                     <li>
-                                        <a href='#Accueil'>
+                                        <a href='/#Accueil'>
                                             <p>Accueil</p>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href='#Portfolio'>
+                                        <a href='/#Portfolio'>
                                             <p>Portfolio</p>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href='#About'>
+                                        <a href='/#About'>
                                             <p>A propos</p>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href='#Contact'>
+                                        <a href='/#Contact'>
                                             <p>Contact</p>
                                         </a>
                                     </li>
@@ -82,22 +82,22 @@ function Header() {
                     ) : (
                         <ul className='ul-ecran-large'>
                             <li>
-                                <a href='#Accueil'>
+                                <a href='/#Accueil'>
                                     <p>Accueil</p>
                                 </a>
                             </li>
                             <li>
-                                <a href='#Portfolio'>
+                                <a href='/#Portfolio'>
                                     <p>Portfolio</p>
                                 </a>
                             </li>
                             <li>
-                                <a href='#About'>
+                                <a href='/#About'>
                                     <p>Compétences</p>
                                 </a>
                             </li>
                             <li>
-                                <a href='#Contact'>
+                                <a href='/#Contact'>
                                     <p>Contact</p>
                                 </a>
                             </li>
