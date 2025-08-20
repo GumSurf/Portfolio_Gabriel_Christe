@@ -110,7 +110,8 @@ section {
         p {
             display: flex;
             flex-wrap: wrap;
-            text-align: left; 
+            text-align: left;
+
             span {
                 background: rgb(105, 104, 105);
                 padding: 4px 10px;
@@ -136,6 +137,32 @@ section {
 
         @include small-phone {
             display: flex;
+        }
+
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .tag {
+            padding: 0.3rem 0.7rem;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: #fff;
+
+            &.react { background: #0366d6; }
+            &.tailwind { background: #0c4a6e; }
+            &.framer { background: #9c27b0; }
+            &.seo { background: #2e7d32; }
+            &.responsive { background: #ef6c00; }
+            &.node { background: #3e8635; }
+            &.mongodb { background: #2e5939; }
+            &.api { background: #6a1b9a; }
+            &.htmlcss { background: #d84315; }
+            &.javascript { background: #f0a500; }
+            &.accessibility { background: #006064; }
         }
     }
 }

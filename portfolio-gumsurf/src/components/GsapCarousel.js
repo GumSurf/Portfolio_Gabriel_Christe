@@ -3,6 +3,7 @@ import NinaCarducci from '../assets/NinaCarducci.webp';
 import MonVieuxGrimoire from '../assets/MonVieuxGrimoire.webp';
 import SophieBluel from '../assets/SophieBluel.webp';
 import CocktailExplorer from '../assets/CocktailExplorer.png';
+import LadyBeaute from '../assets/LadyBeaute.png';
 
 const GsapCarousel = () => {
 
@@ -12,6 +13,25 @@ const GsapCarousel = () => {
             <div class="img-carousel">
                 <div class="spacer"></div>
                 <div class="slide">
+                    <a href="https://www.ladybeaute.fr/" target="_blank" rel="noopener noreferrer">
+                        <div className="card">
+                            <img src={LadyBeaute} alt="Lady Beauté - Institut de beauté à Lanester" />
+                            <div class="background-overlay"></div>
+                            <div className='content_card'>
+                                <h3>Lady Beauté</h3>
+                                <p>Un site immersif et élégant pour une institut de beauté à Lanester.</p>
+                                <p className="tags">
+                                    <span className="tag react">React.js</span>
+                                    <span className="tag tailwind">Tailwind CSS</span>
+                                    <span className="tag framer">Framer Motion</span>
+                                    <span className="tag seo">SEO Optimisé</span>
+                                    <span className="tag responsive">Responsive</span>
+                                </p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="slide">
                     <a href="https://cocktail-explorer-xi.vercel.app/" target="_blank" rel="noopener noreferrer">
                         <div className="card">
                             <img src={CocktailExplorer} alt="" />
@@ -20,14 +40,13 @@ const GsapCarousel = () => {
                                 <h3>Cocktail Explorer</h3>
                                 <p>A la recherche d'une recette de cocktail ?</p>
                                 <p>
-                                    <span>React.js</span>
-                                    <span>TailWind Css</span>
-                                    <span>JavaScript</span>
-                                    <span>responsive</span>
+                                    <span className="tag react">React.js</span>
+                                    <span className="tag tailwind">Tailwind CSS</span>
+                                    <span className="tag javascript">JavaScript</span>
+                                    <span className="tag responsive">Responsive</span>
                                 </p>
                             </div>
                         </div>
-
                     </a>
                 </div>
                 <div class="slide">
@@ -39,10 +58,10 @@ const GsapCarousel = () => {
                                 <h3>Mon Vieux Grimoire</h3>
                                 <p>Un site web permettant aux utilisateurs de noter leurs livres.</p>
                                 <p>
-                                    <span>Node.js</span>
-                                    <span>MongoDB</span>
-                                    <span>JavaScript</span>
-                                    <span>RESTful API</span>
+                                    <span className="tag node">Node.js</span>
+                                    <span className="tag mongodb">MongoDB</span>
+                                    <span className="tag javascript">JavaScript</span>
+                                    <span className="tag api">RESTful API</span>
                                 </p>
                             </div>
                         </div>
@@ -57,10 +76,10 @@ const GsapCarousel = () => {
                                 <h3>Kasa</h3>
                                 <p>Site web de location immobilière entre particuliers, permettant de gérer des annonces de manière simple et efficace.</p>
                                 <p>
-                                    <span>React.js</span>
-                                    <span>Html/Css</span>
-                                    <span>JavaScript</span>
-                                    <span>responsive</span>
+                                    <span className="tag react">React.js</span>
+                                    <span className="tag htmlcss">Html/Css</span>
+                                    <span className="tag javascript">JavaScript</span>
+                                    <span className="tag responsive">Responsive</span>
                                 </p>
                             </div>
                         </div>
@@ -75,10 +94,10 @@ const GsapCarousel = () => {
                                 <h3>Nina Carducci</h3>
                                 <p>Optimisation du site web de Nina Carducci pour améliorer la vitesse de chargement, l'accessibilité et le SEO.</p>
                                 <p>
-                                    <span>JavaScript</span>
-                                    <span>Html/Css</span>
-                                    <span>SEO</span>
-                                    <span>Accessibilité</span>
+                                    <span className="tag javascript">JavaScript</span>
+                                    <span className="tag htmlcss">Html/Css</span>
+                                    <span className="tag seo">SEO</span>
+                                    <span className="tag accessibility">Accessibilité</span>
                                 </p>
                             </div>
                         </div>
@@ -93,9 +112,9 @@ const GsapCarousel = () => {
                                 <h3>Sophie Bluel</h3>
                                 <p>Développement de l’API du site de Sophie Bluel, décoratrice d’intérieur, pour gérer les données et interactions du site.</p>
                                 <p>
-                                    <span>JavaScript</span>
-                                    <span>Html/Css</span>
-                                    <span>RESTful API</span>
+                                    <span className="tag javascript">JavaScript</span>
+                                    <span className="tag htmlcss">Html/Css</span>
+                                    <span className="tag api">RESTful API</span>
                                 </p>
                             </div>
                         </div>
