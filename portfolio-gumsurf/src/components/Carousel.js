@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 import Kasa from '../assets/Kasa.webp';
 import NinaCarducci from '../assets/NinaCarducci.webp';
@@ -93,7 +93,7 @@ const SPECIAL_INDICES = [
     [0, 1, 3, 6],
     [0, 1, 3, 7],
     [0, 1, 3, 8],
-  ];
+];
 
 function App() {
     const [app, updateApp] = useState({
@@ -101,8 +101,29 @@ function App() {
         lastIndex: -1,
         direction: 0
     });
+    const [gsapLoaded, setGsapLoaded] = useState(true);
+
+    useEffect(() => {
+        // Détection GSAP
+        try {
+            if (!window.gsap) setGsapLoaded(false);
+        } catch (e) {
+            setGsapLoaded(false);
+        }
+    }, []);
 
     function Carousel(props) {
+        if (!gsapLoaded) {
+            // Fallback vertical : toutes les slides affichées
+            return (
+                <div className="carousel-fallback">
+                    {props.shapes.map((shape, idx) => (
+                        <Slide key={shape[0]} shape={shape} />
+                    ))}
+                </div>
+            );
+        }
+
         function showNext(index) {
             let lastIndex =
                 index < 0
@@ -144,7 +165,6 @@ function App() {
     }
 
     function Slide(props) {
-
         return (
             <div key={props.shape[0]} className={"slide slide--" + props.shape[0]}>
                 <a href={props.shape[2]}>
@@ -201,7 +221,6 @@ function App() {
 
     return (
         <div className="wrapper">
-
             <Carousel
                 direction={app.direction}
                 currentIndex={app.currentIndex}
@@ -209,7 +228,6 @@ function App() {
                 updateApp={updateApp}
                 shapes={SHAPES}
             />
-
             <Code
                 direction={app.direction}
                 lastShape={TEXT_SHAPES[app.lastIndex]}
@@ -217,6 +235,11 @@ function App() {
                 shapes={TEXT_SHAPES}
                 specialIndices={SPECIAL_INDICES[app.currentIndex]}
             />
+            {!gsapLoaded && (
+                <div className="carousel-warning">
+                    <p>GSAP n'est pas chargé. Le carrousel s'affiche en mode vertical.</p>
+                </div>
+            )}
         </div>
     );
 }
