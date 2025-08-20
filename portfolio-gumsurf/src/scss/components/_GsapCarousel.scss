@@ -107,25 +107,6 @@ section {
         z-index: 999;
         max-width: 90vw;
 
-        p {
-            display: flex;
-            flex-wrap: wrap;
-            text-align: left;
-
-            span {
-                background: rgb(105, 104, 105);
-                padding: 4px 10px;
-                border-radius: 50px;
-                text-transform: capitalize;
-                font-size: 11px;
-                margin-right: 6px;
-                color: white;
-                font-weight: 500;
-                white-space: nowrap;
-                margin: 2px;
-            }
-        }
-
 
         @include tablet {
             display: flex;
@@ -151,7 +132,6 @@ section {
             font-size: 0.9rem;
             font-weight: 500;
             color: #fff;
-
             
             &.react { background: #0366d6; }
             &.tailwind { background: #0c4a6e; }
