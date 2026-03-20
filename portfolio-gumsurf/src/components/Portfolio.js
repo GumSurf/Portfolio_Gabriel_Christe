@@ -1,5 +1,4 @@
 import React from 'react';
-import App from './Carousel'
 import GsapCarousel from './GsapCarousel';
 
 function Body() {

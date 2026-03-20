@@ -10,7 +10,7 @@ const GsapCarousel = () => {
     return (
         <div>
             <section></section>
-            <div class="img-carousel">
+            <div id='Projets' class="img-carousel">
                 <div class="spacer"></div>
                 <div class="slide">
                     <a href="https://www.ladybeaute.fr/" target="_blank" rel="noopener noreferrer">

@@ -1,4 +1,3 @@
-import ImgLogo from '../assets/Logo-Gabriel-CHRISTE.webp';
 import Photo from '../assets/moi_sans_background.png';
 import { Link } from 'react-router-dom';
 import React, { useEffect, useState, useRef } from "react";

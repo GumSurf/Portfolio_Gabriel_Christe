@@ -1,7 +1,5 @@
-import React, { useEffect } from 'react';
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap-trial/ScrollTrigger';
-import Photo from '../assets/moi_sans_background.png';
 import Typewriter from './TypeWriter';
 import MouseScroll from './MouseScroll';
 
@@ -28,11 +26,11 @@ function Home() {
                             vos projets digitaux en offrant des solutions modernes et efficaces.</p>
                     </div>
                     <div className='fadein2s div-links'>
-                        <a href="#" class="button button--stroke" data-block="button">
+                        <a href="#Contact" class="button button--stroke" data-block="button">
                             <span class="button__flair"></span>
                             <span class="button__label link">Contact</span>
                         </a>
-                        <a href="#" class="button button--stroke" data-block="button">
+                        <a href="#Projets" class="button button--stroke" data-block="button">
                             <span class="button__flair"></span>
                             <span class="button__label link">Projets</span>
                         </a>

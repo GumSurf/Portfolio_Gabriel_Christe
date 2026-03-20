@@ -1,6 +1,3 @@
-import Email from '../assets/email.png';
-import Telephone from '../assets/telephone.png';
-import Linkedin from '../assets/linkedin.png';
 import ContactForm from './ContactForm';
 
 function Contact() {

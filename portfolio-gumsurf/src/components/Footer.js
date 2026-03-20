@@ -1,4 +1,3 @@
-import LOGO from '../assets/Logo-Gabriel-CHRISTE.webp'
 import Github from '../assets/github-ico.png'
 import Linkedin from '../assets/linkedin-ico.png'
 import { Link } from 'react-router-dom';
