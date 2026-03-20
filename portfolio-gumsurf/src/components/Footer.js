@@ -27,7 +27,7 @@ function Footer() {
                     </div>
                 </div>
                 <div className='div-copyright'>
-                    <p className='copyright'>© Copyright 2025. Créé par Gabriel Christe</p>
+                    <p className='copyright'>© Copyright 2026 Créé par Gabriel Christe</p>
                     <Link className='copyright' to="/mentions-legales">Mentions Légales</Link>
                     <Link className='copyright' to="/politique-confidentialite">Politique de Confidentialité</Link>
                 </div>
